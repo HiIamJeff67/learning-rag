@@ -1,0 +1,14 @@
+{
+  "lsp": {
+    "basedpyright": {
+      "settings": {
+        "python": {
+          "pythonPath": ".venv/Scripts/python.exe",
+          "analysis": {
+            "extraPaths": ["src"]
+          }
+        }
+      }
+    }
+  }
+}
