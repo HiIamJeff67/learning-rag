@@ -1,0 +1,8 @@
+corpus: data/raw/peps
+chunker: fixed-characters
+chunk_size: 500
+chunk_overlap: 80
+ranker: term-overlap-cosine
+rank_k: 5
+prompt_k: 3
+model: recursive/flint-v1.0:free

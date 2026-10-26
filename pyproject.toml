@@ -1,7 +1,7 @@
 [project]
 name = "learning-rag"
 version = "0.1.0"
-description = "Add your description here"
+description = "Shared experiments for learning RAG"
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = []
@@ -9,6 +9,14 @@ dependencies = []
 [project.scripts]
 learning-rag = "learning_rag:main"
 
+[dependency-groups]
+dev = ["pytest"]
+
+[tool.basedpyright]
+extraPaths = ["src", "experiments"]
+venvPath = "."
+venv = ".venv"
+
 [build-system]
-requires = ["uv_build>=0.12.15,<0.13.0"]
+requires = ["uv_build>=0.13.4"]
 build-backend = "uv_build"

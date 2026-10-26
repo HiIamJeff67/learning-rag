@@ -1,0 +1,207 @@
+[
+  {
+    "question": "Where are the rules for commenting functions written?",
+    "type": "synonym",
+    "expected": [
+      "pep-0257.rst"
+    ],
+    "retrieved": [
+      "pep-0209.rst",
+      "pep-0001.rst",
+      "pep-0276.rst",
+      "pep-0269.rst",
+      "pep-0008.rst"
+    ],
+    "retrieval_ms": 54.8,
+    "e2e_ms": 3779.3,
+    "answer": "I do not know.",
+    "answer_error": null,
+    "recall_at_5": 0.0,
+    "mrr": 0.0
+  },
+  {
+    "question": "How do I write a function that pauses and resumes?",
+    "type": "synonym",
+    "expected": [
+      "pep-0255.rst"
+    ],
+    "retrieved": [
+      "pep-0211.rst",
+      "pep-0225.rst",
+      "pep-0214.rst",
+      "pep-0252.rst",
+      "pep-0225.rst"
+    ],
+    "retrieval_ms": 49.3,
+    "e2e_ms": 3128.5,
+    "answer": "I do not know.",
+    "answer_error": null,
+    "recall_at_5": 0.0,
+    "mrr": 0.0
+  },
+  {
+    "question": "How does a source file declare its character set?",
+    "type": "synonym",
+    "expected": [
+      "pep-0263.rst"
+    ],
+    "retrieved": [
+      "pep-0232.rst",
+      "pep-0214.rst",
+      "pep-0277.rst",
+      "pep-0218.rst",
+      "pep-0100.rst"
+    ],
+    "retrieval_ms": 52.9,
+    "e2e_ms": 3632.3,
+    "answer": "I do not know",
+    "answer_error": null,
+    "recall_at_5": 0.0,
+    "mrr": 0.0
+  },
+  {
+    "question": "Update a name by adding to its current value",
+    "type": "synonym",
+    "expected": [
+      "pep-0203.rst"
+    ],
+    "retrieved": [
+      "pep-0247.rst",
+      "pep-0221.rst",
+      "pep-0258.rst",
+      "pep-0272.rst",
+      "pep-0227.rst"
+    ],
+    "retrieval_ms": 52.4,
+    "e2e_ms": 5636.8,
+    "answer": "I do not know.",
+    "answer_error": null,
+    "recall_at_5": 0.0,
+    "mrr": 0.0
+  },
+  {
+    "question": "Load a module from a compressed bundle",
+    "type": "synonym",
+    "expected": [
+      "pep-0273.rst"
+    ],
+    "retrieved": [
+      "pep-0246.rst",
+      "pep-0236.rst",
+      "pep-0232.rst",
+      "pep-0231.rst",
+      "pep-0232.rst"
+    ],
+    "retrieval_ms": 55.8,
+    "e2e_ms": 3989.7,
+    "answer": "I do not know.",
+    "answer_error": null,
+    "recall_at_5": 0.0,
+    "mrr": 0.0
+  },
+  {
+    "question": "Which file is the Zen of Python and which file explains what PEP means?",
+    "type": "multi-hop",
+    "expected": [
+      "pep-0020.rst",
+      "pep-0001.rst"
+    ],
+    "retrieved": [
+      "pep-0277.rst",
+      "pep-0012.rst",
+      "pep-0277.rst",
+      "pep-0263.rst",
+      "pep-0009.rst"
+    ],
+    "retrieval_ms": 55.8,
+    "e2e_ms": 5194.4,
+    "answer": "I do not know.",
+    "answer_error": null,
+    "recall_at_5": 0.0,
+    "mrr": 0.0
+  },
+  {
+    "question": "Documentation string rules and the framework that processes those strings",
+    "type": "multi-hop",
+    "expected": [
+      "pep-0257.rst",
+      "pep-0256.rst"
+    ],
+    "retrieved": [
+      "pep-0216.rst",
+      "pep-0239.rst",
+      "pep-0013.rst",
+      "pep-0205.rst",
+      "pep-0102.rst"
+    ],
+    "retrieval_ms": 53.2,
+    "e2e_ms": 8499.6,
+    "answer": "The context states that the ``__doc__`` attribute is called a documentation string, or docstring. It is often used to summarize the interface of the module, class or function. However, since there is no common format for documentation string, tools for extracting docstrings and transforming those into documentation in a standard format (e.g., DocBook) have not sprang up in abundance, and those that do exist are for the most part unmaintained and unused.",
+    "answer_error": null,
+    "recall_at_5": 0.0,
+    "mrr": 0.0
+  },
+  {
+    "question": "Inline loops that build lists and the protocol for walking a sequence",
+    "type": "multi-hop",
+    "expected": [
+      "pep-0202.rst",
+      "pep-0234.rst"
+    ],
+    "retrieved": [
+      "pep-0234.rst",
+      "pep-0207.rst",
+      "pep-0201.rst",
+      "pep-0272.rst",
+      "pep-0257.rst"
+    ],
+    "retrieval_ms": 51.9,
+    "e2e_ms": 7714.4,
+    "answer": null,
+    "answer_error": "recursive/flint-v1.0:free returned no text",
+    "recall_at_5": 0.0,
+    "mrr": 1.0
+  },
+  {
+    "question": "Functions that pause and resume and the protocol for walking items",
+    "type": "multi-hop",
+    "expected": [
+      "pep-0255.rst",
+      "pep-0234.rst"
+    ],
+    "retrieved": [
+      "pep-0209.rst",
+      "pep-0207.rst",
+      "pep-0212.rst",
+      "pep-0253.rst",
+      "pep-0013.rst"
+    ],
+    "retrieval_ms": 54.1,
+    "e2e_ms": 15757.0,
+    "answer": null,
+    "answer_error": "recursive/flint-v1.0:free returned no text",
+    "recall_at_5": 0.0,
+    "mrr": 0.0
+  },
+  {
+    "question": "Rules for laying out code and how a source file declares its character set",
+    "type": "multi-hop",
+    "expected": [
+      "pep-0008.rst",
+      "pep-0263.rst"
+    ],
+    "retrieved": [
+      "pep-0225.rst",
+      "pep-0245.rst",
+      "pep-0012.rst",
+      "pep-0008.rst",
+      "pep-0225.rst"
+    ],
+    "retrieval_ms": 50.5,
+    "e2e_ms": 8075.0,
+    "answer": "I do not know.",
+    "answer_error": null,
+    "recall_at_5": 0.0,
+    "mrr": 0.25
+  }
+]

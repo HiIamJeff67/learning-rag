@@ -1,0 +1,40 @@
+{
+  "config": {
+    "corpus": "data/raw/peps",
+    "chunker": "fixed-characters",
+    "chunk_size": "500",
+    "chunk_overlap": "80",
+    "ranker": "term-overlap-cosine",
+    "rank_k": "5",
+    "prompt_k": "3",
+    "model": "recursive/flint-v1.0:free"
+  },
+  "query": "Style Guide for Python Code",
+  "retrieval": [
+    {
+      "score": 0.4844813951249544,
+      "start": 0,
+      "text": "[pep-0007.rst]\nPEP: 7\nTitle: Style Guide for C Code\nAuthor: Guido van Rossum <guido@python.org>, Barry Warsaw <barry@python.org>\nStatus: Active\nType: Process\nCreated: 05-Jul-2001\nPost-History:\n\n.. highlight:: c\n\nIntroduction\n============\n\nThis document gives coding conventions for the C code comprising the C\nimplementation of Python.  Please see the companion informational PEP\ndescribing :pep:`style guidelines for Python code <8>`.\n\nNote, rules are there to be broken.  Two good reasons to break a\nparticular ru"
+    },
+    {
+      "score": 0.4762831485407526,
+      "start": 0,
+      "text": "[pep-0008.rst]\nPEP: 8\nTitle: Style Guide for Python Code\nAuthor: Guido van Rossum <guido@python.org>,\n        Barry Warsaw <barry@python.org>,\n        Alyssa Coghlan <ncoghlan@gmail.com>\nStatus: Active\nType: Process\nCreated: 05-Jul-2001\nPost-History: 05-Jul-2001, 01-Aug-2013\n\n\nIntroduction\n============\n\nThis document gives coding conventions for the Python code comprising\nthe standard library in the main Python distribution.  Please see the\ncompanion informational PEP describing :pep:`style guidelines for the "
+    },
+    {
+      "score": 0.4338609156373123,
+      "start": 13440,
+      "text": "[pep-0200.rst]\ns frowns on) to support debugger, which uses SET_LINENO.\n\n  http://starship.python.net/~vlad/lineno/ for (working at the time)\n  patches\n\n  Discussions on python-dev:\n\n  - http://www.python.org/pipermail/python-dev/2000-April/subject.html\n    Subject: \"Why do we need Traceback Objects?\"\n\n  - http://www.python.org/pipermail/python-dev/1999-August/002252.html\n\n* test harness for C code - Trent Mick\n\n\nRejected\n========\n\n* 'indexing-for' - Thomas Wouters Special syntax to give Python code\n  access t"
+    },
+    {
+      "score": 0.43244998209386826,
+      "start": 420,
+      "text": "[pep-0008.rst]\ne see the\ncompanion informational PEP describing :pep:`style guidelines for the C code\nin the C implementation of Python <7>`.\n\nThis document and :pep:`257` (Docstring Conventions) were adapted from\nGuido's original Python Style Guide essay, with some additions from\nBarry's style guide [2]_.\n\nThis style guide evolves over time as additional conventions are\nidentified and past conventions are rendered obsolete by changes in\nthe language itself.\n\nMany projects have their own coding style guideline"
+    },
+    {
+      "score": 0.35999999999999993,
+      "start": 47460,
+      "text": "[pep-0008.rst]\nutside the stdlib, experiments within the rules of :pep:`484`\n  are now encouraged.  For example, marking up a large third party\n  library or application with :pep:`484` style type annotations,\n  reviewing how easy it was to add those annotations, and observing\n  whether their presence increases code understandability.\n\n- The Python standard library should be conservative in adopting such\n  annotations, but their use is allowed for new code and for big\n  refactorings.\n\n- For code that wants to m"
+    }
+  ]
+}

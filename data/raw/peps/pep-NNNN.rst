@@ -1,0 +1,105 @@
+PEP: <REQUIRED: pep number>
+Title: <REQUIRED: pep title>
+Author: <REQUIRED: list of authors' names and optionally, email addrs>
+Sponsor: <name of sponsor>
+PEP-Delegate: <PEP delegate's name>
+Discussions-To: Pending
+Status: <REQUIRED: Draft | Active | Accepted | Provisional | Deferred | Rejected | Withdrawn | Final | Superseded>
+Type: <REQUIRED: Standards Track | Informational | Process>
+Topic: <Governance | Packaging | Release | Typing>
+Requires: <pep numbers>
+Created: <date created on, in dd-mmm-yyyy format>
+Python-Version: <version number>
+Post-History: Pending
+Replaces: <pep number>
+Superseded-By: <pep number>
+Resolution: <url>
+
+
+Abstract
+========
+
+[A short (~200 word) description of the technical issue being addressed.]
+
+
+Motivation
+==========
+
+[Clearly explain why the existing language specification is inadequate to address the problem that the PEP solves.]
+
+
+Specification
+=============
+
+[Describe the syntax and semantics of any new language feature.]
+
+
+Rationale
+=========
+
+[Describe why particular design decisions were made.]
+
+
+Backwards Compatibility
+=======================
+
+[Describe potential impact and severity on pre-existing code.]
+
+
+Security Implications
+=====================
+
+[How could a malicious user take advantage of this new feature?]
+
+
+How to Teach This
+=================
+
+[How to teach users, new and experienced, how to apply the PEP to their work.]
+
+
+Reference Implementation
+========================
+
+[Link to any existing implementation and details about its state, e.g. proof-of-concept.]
+
+
+Rejected Ideas
+==============
+
+[Why certain ideas that were brought while discussing this PEP were not ultimately pursued.]
+
+
+Open Issues
+===========
+
+[Any points that are still being decided/discussed.]
+
+
+Acknowledgements
+================
+
+[Thank anyone who has helped with the PEP.]
+
+
+Footnotes
+=========
+
+[A collection of footnotes cited in the PEP, and a place to list non-inline hyperlink targets.]
+
+
+Change History
+==============
+
+[A summary of major changes the PEP has undergone.  Whenever you update the
+``Post-History``, add a new bullet item in newest-first (i.e. reverse
+chronological) order, using the same ``DD-MMM-YYYY`` format, with sub-bullets
+summarizing the changes.  You can use the same link for the date bullet as you
+do in the ``Post-History`` addition.]
+
+
+Copyright
+=========
+
+This document is placed in the public domain or under the
+CC0-1.0-Universal license, whichever is more permissive.

@@ -1,0 +1,31 @@
+question,expected_doc_ids,type
+What does PEP stand for?,pep-0001.rst,exact
+Style Guide for Python Code,pep-0008.rst,exact
+Beautiful is better than ugly.,pep-0020.rst,exact
+Lockstep Iteration,pep-0201.rst,exact
+List Comprehensions,pep-0202.rst,exact
+Augmented Assignments,pep-0203.rst,exact
+Weak References,pep-0205.rst,exact
+Adding a Built-In Set Object Type,pep-0218.rst,exact
+Iterators,pep-0234.rst,exact
+Simple Generators,pep-0255.rst,exact
+A docstring is a string literal that occurs as the first statement,pep-0257.rst,exact
+Python Database API Specification v2.0,pep-0249.rst,exact
+Defining Python Source Code Encodings,pep-0263.rst,exact
+Universal Newline Support,pep-0278.rst,exact
+Where are the rules for commenting functions written?,pep-0257.rst,synonym
+How should I lay out and space Python code?,pep-0008.rst,synonym
+How do I write a function that pauses and resumes?,pep-0255.rst,synonym
+How does a source file declare its character set?,pep-0263.rst,synonym
+Built-in type for unique unordered values,pep-0218.rst,synonym
+Update a name by adding to its current value,pep-0203.rst,synonym
+Talk to a SQL database from Python,pep-0249.rst,synonym
+Load a module from a compressed bundle,pep-0273.rst,synonym
+Which file is the Zen of Python and which file explains what PEP means?,pep-0020.rst|pep-0001.rst,multi-hop
+Documentation string rules and the framework that processes those strings,pep-0257.rst|pep-0256.rst,multi-hop
+Inline loops that build lists and the protocol for walking a sequence,pep-0202.rst|pep-0234.rst,multi-hop
+Functions that pause and resume and the protocol for walking items,pep-0255.rst|pep-0234.rst,multi-hop
+Rules for laying out code and how a source file declares its character set,pep-0008.rst|pep-0263.rst,multi-hop
+Bringing Unicode into the interpreter and Unicode file names on Windows,pep-0100.rst|pep-0277.rst,multi-hop
+How do I deploy this index to Kubernetes?,,no-answer
+What is the capital of France?,,no-answer

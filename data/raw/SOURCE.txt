@@ -1,0 +1,5 @@
+source: https://github.com/python/peps
+commit: d999c848d809b682ef80151915f2040932704b1f
+selection: first 100 peps/pep-*.rst blobs in path order at that commit
+manifest: data/raw/peps/MANIFEST.txt
+license: published with the Python PEPs; these copies stay unmodified

@@ -1,0 +1,19 @@
+{
+  "questions": 30,
+  "scored_questions": 28,
+  "recall_at_5": 0.643,
+  "mrr": 0.571,
+  "retrieval_ms_p50": 52.9,
+  "e2e_ms_p50": 5255.1,
+  "e2e_errors": 5,
+  "config": {
+    "corpus": "data/raw/peps",
+    "chunker": "fixed-characters",
+    "chunk_size": "500",
+    "chunk_overlap": "80",
+    "ranker": "term-overlap-cosine",
+    "rank_k": "5",
+    "prompt_k": "3",
+    "model": "recursive/flint-v1.0:free"
+  }
+}
