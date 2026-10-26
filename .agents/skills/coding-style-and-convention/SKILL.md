@@ -63,7 +63,7 @@ Read model settings in `get_config()`. Do not hardcode ceilings, model ids, or k
 
 - Packages and modules: `snake_case`. Capability directories are plural when they hold variants (`chunks/`, `ranks/`).
 - Functions say what they do: `fixed_chunks`, `top_k`, `complete`, `get_config`. Not `process`, `handle`, or `run_helper`.
-- Experiments: `eNN_short_name`, numbered in learning order (`e01_naive_rag`). The number is not a version. The name must be a Python identifier so that directory can be a package. `experiments/` is only a folder and has no `__init__.py`. Run with `uv run python -m experiments.e01_naive_rag.run`. Imports between files in that directory are relative (`from .config import`).
+- Experiments: `eNN_short_name`, numbered in learning order (`e01_naive_rag`). The number is not a version. The name must be a Python identifier so it can be a package. `experiments/` has no `__init__.py`. Run from the repo root with `uv run python -m experiments.e01_naive_rag.run`. Imports between files in that directory are relative (`from .config import`).
 - Tests: `test_<module>.py` beside the module. Test names state the behavior (`test_bad_overlap`).
 - Comments only for a reason the code cannot show. A known limit uses `shortcut: <limit>, <when to upgrade>`.
 

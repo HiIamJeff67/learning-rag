@@ -27,7 +27,7 @@ Copy `.env.example` to `.env` when an experiment needs an API key. The term-over
 | Path | Contents |
 |---|---|
 | `data/raw/` | Corpus files. The current pin is in `data/raw/SOURCE.txt`. |
-| `experiments/` | One directory per learning item. `run.py` wires the shared functions for that item. |
+| `experiments/` | One directory per learning item. Run it as a module from the repo root, not as a file path. |
 | `src/learning_rag/` | Shared functions in capability packages such as `chunks/` and `ranks/`. |
 | `tests/` | Integration tests and tests that cross package boundaries. |
 | `notebook/` | Study notes for the current chapter. |
@@ -36,4 +36,4 @@ Copy `.env.example` to `.env` when an experiment needs an API key. The term-over
 
 ## Current experiment
 
-`experiments/e01_naive_rag/` is the RAG-9 baseline: fixed-size chunks of PEP 257, term-overlap cosine, and an optional text-model answer. The corpus commit is recorded in `data/raw/SOURCE.txt`. Changing those files means pinning a new source and rerunning the experiment.
+`experiments/e01_naive_rag/` is the baseline: fixed-size chunks of the pinned PEPs, term-overlap cosine, and an optional text-model answer. Run it with `uv run python -m experiments.e01_naive_rag.run`. The corpus commit is recorded in `data/raw/SOURCE.txt`. Changing those files means pinning a new source and rerunning the experiment.
