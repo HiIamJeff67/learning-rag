@@ -1,0 +1,59 @@
+{
+  "status": "passed",
+  "verified_at": "2026-11-01T13:33:08.184156+00:00",
+  "tests": {
+    "command": "uv run pytest -q",
+    "passed": 28,
+    "failed": 0
+  },
+  "checks": {
+    "100_pinned_documents": true,
+    "corpus_and_question_set_unchanged_from_HEAD": true,
+    "all_expected_document_ids_exist": true,
+    "30_complete_generation_traces": true,
+    "10_failures_include_partial_recall": true,
+    "2_of_2_no_answer_refusals": true,
+    "cli_and_eval_retrieval_and_prompt_match": true,
+    "recorded_implementation_hashes_match_files": true,
+    "independent_recall_and_median_recalculation_matches": true,
+    "all_30_rankings_scores_and_prompts_reproduced_offline": true
+  },
+  "retrieval_signature_sha256": "9cbc6f0311d2c067abf6f992d400310bf32abbfc95145839f01737e661c0cbd7",
+  "reproduction_fields": [
+    "question",
+    "retrieval",
+    "context_doc_ids",
+    "prompt",
+    "expected",
+    "recall_at_5",
+    "mrr_at_5",
+    "all_docs_at_5",
+    "context_recall"
+  ],
+  "generation": {
+    "model": "gpt-6.1-sol",
+    "attempts": 30,
+    "errors": 0,
+    "no_answer_refusals": 2,
+    "recall_at_5": 0.678571,
+    "mrr_at_5": 0.571429,
+    "retrieval_ms_p50": 65.6,
+    "e2e_ms_p50": 2103.6,
+    "previous_run_exact_answer_matches": 18,
+    "seed_sent": false,
+    "temperature_sent": false,
+    "reproducibility_limit": "Retrieval rankings and scores reproduce exactly. Hosted generation text and network latency are not deterministic."
+  },
+  "commands": [
+    "uv run pytest -q",
+    "uv run python -m experiments.e01_naive_rag.eval --answer",
+    "uv run python -m experiments.e01_naive_rag.eval --output .venv/acceptance/retrieval-final",
+    "uv run python -m experiments.e01_naive_rag.run --answer \"What does PEP stand for?\""
+  ],
+  "artifacts_sha256": {
+    "metrics.json": "d79e9499c785d2a17dd724c115b72879bfd25d88c9e6012bf90ef2a1ffe97d3a",
+    "questions.json": "276dbcef6e52fcc97717f5b6233dd573a64f34753a0adce1814dfb28636f8465",
+    "failures.json": "5df06ff1625151005c36707dc51e173e9eb35806f0c7f550dd29d9acf7ad014b",
+    "last_run.json": "7403864ced2fe9e8381b3301f59eabc00d64ac4349fa241bbe79cf859e1665a3"
+  }
+}

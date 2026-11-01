@@ -7,34 +7,117 @@
     "ranker": "term-overlap-cosine",
     "rank_k": "5",
     "prompt_k": "3",
-    "model": "recursive/flint-v1.0:free"
+    "seed": "42",
+    "temperature": "0",
+    "reasoning_effort": "low",
+    "python": "3.12.15",
+    "documents": 100,
+    "corpus_sha256": "18fa7b1bb4dc911a0a4e57c9423e990b5f080eefd1994a74c629ab85b1dc4ec0",
+    "corpus_source": "source: https://github.com/python/peps\ncommit: d999c848d809b682ef80151915f2040932704b1f\nselection: first 100 peps/pep-*.rst blobs in path order at that commit\nmanifest: data/raw/peps/MANIFEST.txt\nlicense: published with the Python PEPs; these copies stay unmodified\n",
+    "questions_sha256": "05a42ee7973fb3e0fb1a8601e7165f0ed108f4b848812afb71a43e8ceeaf7c21",
+    "implementation_sha256": {
+      "experiments/e01_naive_rag/config.yaml": "a3908e828f3878fe5fd7ff0ef97d2a4cff7e651571ed33feaab7c23b1fff04c8",
+      "experiments/e01_naive_rag/config.py": "0a9d2c1e4684d126fc3ba635d6e6c9ac777eb894fe9d50d79ba6a0224745cf5a",
+      "experiments/e01_naive_rag/run.py": "8e4afff56c29900558f261f06240f68b3d7b081627dc80d5822895ca93d64a2e",
+      "experiments/e01_naive_rag/eval.py": "eceee7453ea3e7725524e0df6ad2e3d9f95886e47bd7cf12f42db1fd7c4ad0e3",
+      "src/learning_rag/chunks/fixed.py": "a79a4b75f0e16ba4eb5399fe7150420e402a7b725d91e93c56b2e275fa8677a9",
+      "src/learning_rag/ranks/term_overlap.py": "8d6bd3730efe54a63138925fb9c3de08226a031b91ff6509a425ea82569e6207",
+      "src/learning_rag/metrics/recall_at_k.py": "5af65bc439c9db9116cae8e03c61abea815ac421f1111783bcdae541aa151bb3",
+      "src/learning_rag/metrics/reciprocal_rank.py": "116e262e422dab7f3b9bfae8fdc9867e3b7b39c5c58c9f179f0717feb8b0bb75",
+      "src/learning_rag/metrics/p_n.py": "feb8ecfafc1159e7b20d9be2774ea964589ce8f045402cf56a089a54c851a784",
+      "src/learning_rag/llm.py": "75b56c70bbcff3a2f4d97b5a8e6ba3bb7ae6a81ad304318705ac126e09d4b2ac",
+      "src/learning_rag/shared/settings.py": "9709240592f07dbc8b4fba04bc6d60644cb36875795104648132385946fe52f9"
+    },
+    "generation": {
+      "base_url": "https://api.openai.com/v1",
+      "model": "gpt-6.1-sol",
+      "max_tokens": 1200,
+      "reasoning_tokens": 400,
+      "reasoning_effort": "low"
+    }
   },
-  "query": "Style Guide for Python Code",
+  "question": "What does PEP stand for?",
   "retrieval": [
     {
-      "score": 0.4844813951249544,
-      "start": 0,
-      "text": "[pep-0007.rst]\nPEP: 7\nTitle: Style Guide for C Code\nAuthor: Guido van Rossum <guido@python.org>, Barry Warsaw <barry@python.org>\nStatus: Active\nType: Process\nCreated: 05-Jul-2001\nPost-History:\n\n.. highlight:: c\n\nIntroduction\n============\n\nThis document gives coding conventions for the C code comprising the C\nimplementation of Python.  Please see the companion informational PEP\ndescribing :pep:`style guidelines for Python code <8>`.\n\nNote, rules are there to be broken.  Two good reasons to break a\nparticular ru"
+      "doc_id": "pep-0009.rst",
+      "score": 0.3877833671647406,
+      "start": 8400,
+      "text": "[pep-0009.rst]\ne\n      References section.  Note that the pep2html.py script will\n      calculate URLs automatically.  For example:\n\n              ...\n              Refer to PEP 1 [7] for more information about PEP style\n              ...\n\n          References\n\n              [7] PEP 1, PEP Purpose and Guidelines, Warsaw, Hylton\n                  http://peps.python.org/pep-0001/\n\n      If you decide to provide an explicit URL for a PEP, please use\n      this as the URL template:\n\n          http://peps.python.or"
     },
     {
-      "score": 0.4762831485407526,
-      "start": 0,
-      "text": "[pep-0008.rst]\nPEP: 8\nTitle: Style Guide for Python Code\nAuthor: Guido van Rossum <guido@python.org>,\n        Barry Warsaw <barry@python.org>,\n        Alyssa Coghlan <ncoghlan@gmail.com>\nStatus: Active\nType: Process\nCreated: 05-Jul-2001\nPost-History: 05-Jul-2001, 01-Aug-2013\n\n\nIntroduction\n============\n\nThis document gives coding conventions for the Python code comprising\nthe standard library in the main Python distribution.  Please see the\ncompanion informational PEP describing :pep:`style guidelines for the "
+      "doc_id": "pep-0012.rst",
+      "score": 0.3662335103823572,
+      "start": 18900,
+      "text": "[pep-0012.rst]\nsection.  The\n    backquotes are optional since the reference text is a single word;\n    we can also just write: Abstract_.\n\nTo refer to PEPs or RFCs, always use the ``:pep:`` and ``:rfc:`` roles,\nnever hardcoded URLs.\nFor example:\n\n.. code-block:: rst\n\n    See :pep:`1` for more information on how to write a PEP,\n    and :pep:`the Hyperlink section of PEP 12 <12#hyperlinks>` for how to link.\n\nThis renders as:\n\n    See :pep:`1` for more information on how to write a PEP,\n    and :pep:`the Hyperli"
     },
     {
-      "score": 0.4338609156373123,
-      "start": 13440,
-      "text": "[pep-0200.rst]\ns frowns on) to support debugger, which uses SET_LINENO.\n\n  http://starship.python.net/~vlad/lineno/ for (working at the time)\n  patches\n\n  Discussions on python-dev:\n\n  - http://www.python.org/pipermail/python-dev/2000-April/subject.html\n    Subject: \"Why do we need Traceback Objects?\"\n\n  - http://www.python.org/pipermail/python-dev/1999-August/002252.html\n\n* test harness for C code - Trent Mick\n\n\nRejected\n========\n\n* 'indexing-for' - Thomas Wouters Special syntax to give Python code\n  access t"
-    },
-    {
-      "score": 0.43244998209386826,
-      "start": 420,
-      "text": "[pep-0008.rst]\ne see the\ncompanion informational PEP describing :pep:`style guidelines for the C code\nin the C implementation of Python <7>`.\n\nThis document and :pep:`257` (Docstring Conventions) were adapted from\nGuido's original Python Style Guide essay, with some additions from\nBarry's style guide [2]_.\n\nThis style guide evolves over time as additional conventions are\nidentified and past conventions are rendered obsolete by changes in\nthe language itself.\n\nMany projects have their own coding style guideline"
-    },
-    {
+      "doc_id": "pep-0008.rst",
       "score": 0.35999999999999993,
-      "start": 47460,
-      "text": "[pep-0008.rst]\nutside the stdlib, experiments within the rules of :pep:`484`\n  are now encouraged.  For example, marking up a large third party\n  library or application with :pep:`484` style type annotations,\n  reviewing how easy it was to add those annotations, and observing\n  whether their presence increases code understandability.\n\n- The Python standard library should be conservative in adopting such\n  annotations, but their use is allowed for new code and for big\n  refactorings.\n\n- For code that wants to m"
+      "start": 24360,
+      "text": "[pep-0008.rst]\n       # Compensate for border\n\nDocumentation Strings\n---------------------\n\nConventions for writing good documentation strings\n(a.k.a. \"docstrings\") are immortalized in :pep:`257`.\n\n- Write docstrings for all public modules, functions, classes, and\n  methods.  Docstrings are not necessary for non-public methods, but\n  you should have a comment that describes what the method does.  This\n  comment should appear after the ``def`` line.\n\n- :pep:`257` describes good docstring conventions.  Note that"
+    },
+    {
+      "doc_id": "pep-0001.rst",
+      "score": 0.34815531191139565,
+      "start": 0,
+      "text": "[pep-0001.rst]\nPEP: 1\nTitle: PEP Purpose and Guidelines\nAuthor: Barry Warsaw, Jeremy Hylton, David Goodger, Alyssa Coghlan\nStatus: Active\nType: Process\nCreated: 13-Jun-2000\nPost-History: 21-Mar-2001, 29-Jul-2002, 03-May-2003, 05-May-2012,\n              07-Apr-2013\n\n\nWhat is a PEP?\n==============\n\nPEP stands for Python Enhancement Proposal.  A PEP is a design\ndocument providing information to the Python community, or describing\na new feature for Python or its processes or environment.  The PEP\nshould provide a "
+    },
+    {
+      "doc_id": "pep-0001.rst",
+      "score": 0.3309112606779028,
+      "start": 36960,
+      "text": "[pep-0001.rst]\nen care of by the PEP editors.\nAlternatively, even developers may request assistance from PEP editors by\nmentioning ``@python/pep-editors`` on GitHub.\n\nFor each new PEP that comes in, an editor does the following:\n\n* Make sure that the PEP is either co-authored by a core developer, has a core\n  developer as a sponsor, or has a sponsor specifically approved for this PEP\n  by the Steering Council.\n\n* Read the PEP to check if it is ready: sound and complete.  The ideas\n  must make technical sense, "
     }
-  ]
+  ],
+  "retrieved": [
+    "pep-0009.rst",
+    "pep-0012.rst",
+    "pep-0008.rst",
+    "pep-0001.rst",
+    "pep-0001.rst"
+  ],
+  "context_doc_ids": [
+    "pep-0009.rst",
+    "pep-0012.rst",
+    "pep-0008.rst"
+  ],
+  "prompt": "Answer briefly from the context only. If the context does not say, reply exactly: I do not know.\n\nContext:\n[start=8400] [pep-0009.rst]\ne\n      References section.  Note that the pep2html.py script will\n      calculate URLs automatically.  For example:\n\n              ...\n              Refer to PEP 1 [7] for more information about PEP style\n              ...\n\n          References\n\n              [7] PEP 1, PEP Purpose and Guidelines, Warsaw, Hylton\n                  http://peps.python.org/pep-0001/\n\n      If you decide to provide an explicit URL for a PEP, please use\n      this as the URL template:\n\n          http://peps.python.or\n\n[start=18900] [pep-0012.rst]\nsection.  The\n    backquotes are optional since the reference text is a single word;\n    we can also just write: Abstract_.\n\nTo refer to PEPs or RFCs, always use the ``:pep:`` and ``:rfc:`` roles,\nnever hardcoded URLs.\nFor example:\n\n.. code-block:: rst\n\n    See :pep:`1` for more information on how to write a PEP,\n    and :pep:`the Hyperlink section of PEP 12 <12#hyperlinks>` for how to link.\n\nThis renders as:\n\n    See :pep:`1` for more information on how to write a PEP,\n    and :pep:`the Hyperli\n\n[start=24360] [pep-0008.rst]\n       # Compensate for border\n\nDocumentation Strings\n---------------------\n\nConventions for writing good documentation strings\n(a.k.a. \"docstrings\") are immortalized in :pep:`257`.\n\n- Write docstrings for all public modules, functions, classes, and\n  methods.  Docstrings are not necessary for non-public methods, but\n  you should have a comment that describes what the method does.  This\n  comment should appear after the ``def`` line.\n\n- :pep:`257` describes good docstring conventions.  Note that\n\nQuestion: What does PEP stand for?",
+  "answer": "Python Enhancement Proposal.",
+  "answer_error": null,
+  "generation": {
+    "text": "Python Enhancement Proposal.",
+    "request": {
+      "model": "gpt-6.1-sol",
+      "messages": [
+        {
+          "role": "user",
+          "content": "Answer briefly from the context only. If the context does not say, reply exactly: I do not know.\n\nContext:\n[start=8400] [pep-0009.rst]\ne\n      References section.  Note that the pep2html.py script will\n      calculate URLs automatically.  For example:\n\n              ...\n              Refer to PEP 1 [7] for more information about PEP style\n              ...\n\n          References\n\n              [7] PEP 1, PEP Purpose and Guidelines, Warsaw, Hylton\n                  http://peps.python.org/pep-0001/\n\n      If you decide to provide an explicit URL for a PEP, please use\n      this as the URL template:\n\n          http://peps.python.or\n\n[start=18900] [pep-0012.rst]\nsection.  The\n    backquotes are optional since the reference text is a single word;\n    we can also just write: Abstract_.\n\nTo refer to PEPs or RFCs, always use the ``:pep:`` and ``:rfc:`` roles,\nnever hardcoded URLs.\nFor example:\n\n.. code-block:: rst\n\n    See :pep:`1` for more information on how to write a PEP,\n    and :pep:`the Hyperlink section of PEP 12 <12#hyperlinks>` for how to link.\n\nThis renders as:\n\n    See :pep:`1` for more information on how to write a PEP,\n    and :pep:`the Hyperli\n\n[start=24360] [pep-0008.rst]\n       # Compensate for border\n\nDocumentation Strings\n---------------------\n\nConventions for writing good documentation strings\n(a.k.a. \"docstrings\") are immortalized in :pep:`257`.\n\n- Write docstrings for all public modules, functions, classes, and\n  methods.  Docstrings are not necessary for non-public methods, but\n  you should have a comment that describes what the method does.  This\n  comment should appear after the ``def`` line.\n\n- :pep:`257` describes good docstring conventions.  Note that\n\nQuestion: What does PEP stand for?"
+        }
+      ],
+      "max_completion_tokens": 1200,
+      "reasoning_effort": "low"
+    },
+    "response_id": "chatcmpl-EfPy3F4jXWsH5W1XuuuyYoSz6Q20J",
+    "model": "gpt-6.1-sol",
+    "system_fingerprint": null,
+    "finish_reason": "stop",
+    "usage": {
+      "prompt_tokens": 451,
+      "completion_tokens": 7,
+      "total_tokens": 458,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "audio_tokens": 0,
+        "accepted_prediction_tokens": 0,
+        "rejected_prediction_tokens": 0
+      }
+    }
+  },
+  "retrieval_ms": 62.746,
+  "e2e_ms": 1897.835
 }

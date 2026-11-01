@@ -1,5 +1,8 @@
 def recall_at_k(retrieved: list[str], expected: list[str], k: int = 5) -> float:
     if not expected:
-        raise ValueError("no-anwser questions are not scored by recall")
+        raise ValueError("no-answer questions are not scored by recall")
+    if k <= 0:
+        raise ValueError("k must be positive")
     found = set(retrieved[:k])
-    return float(all(doc in found for doc in expected))
+    relevant = set(expected)
+    return len(found & relevant) / len(relevant)

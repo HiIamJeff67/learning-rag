@@ -66,3 +66,18 @@ def test_load_env_file_does_not_override(tmp_path, monkeypatch):
     load_env_file(env_file)
     assert os.environ["MODEL_API_KEY"] == "already-set"
     assert os.environ["OTHER"] == "1"
+
+
+def test_blank_base_and_model_use_defaults(monkeypatch):
+    monkeypatch.setenv("MODEL_API_KEY", "test-key")
+    monkeypatch.setenv("MODEL_BASE_URL", "")
+    monkeypatch.setenv("MODEL_NAME", "")
+    assert get_config()[1:3] == ("https://openrouter.ai/api/v1", "recursive/flint-v1.0:free")
+
+
+def test_free_flag_rejects_openai_before_any_request(monkeypatch):
+    monkeypatch.setenv("MODEL_API_KEY", "test-key")
+    monkeypatch.setenv("MODEL_BASE_URL", "https://api.openai.com/v1")
+    monkeypatch.setenv("MODEL_NAME", "gpt-6.1-sol")
+    with pytest.raises(ValueError, match="--free"):
+        get_config(only_free_model=True)

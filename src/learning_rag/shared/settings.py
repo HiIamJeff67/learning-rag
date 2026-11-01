@@ -1,5 +1,6 @@
 import os
 from pathlib import Path
+from urllib.parse import urlsplit
 
 # shortcut: KEY=VALUE only, no export/comments. Upgrade if a value needs a comment or multiline.
 # One process keeps one config. Call reset_config() in tests before changing MODEL_*.
@@ -34,8 +35,8 @@ def get_config(only_free_model: bool = False) -> tuple[str, str, str, int, int]:
     if _config is None:
         load_env_file()
         key = os.environ.get("MODEL_API_KEY", "")
-        base = os.environ.get("MODEL_BASE_URL", DEFAULT_BASE_URL).rstrip("/")
-        model = os.environ.get("MODEL_NAME", DEFAULT_MODEL)
+        base = (os.environ.get("MODEL_BASE_URL") or DEFAULT_BASE_URL).rstrip("/")
+        model = os.environ.get("MODEL_NAME") or DEFAULT_MODEL
         if not key:
             raise RuntimeError("MODEL_API_KEY is missing")
         if not base or not model:
@@ -49,6 +50,8 @@ def get_config(only_free_model: bool = False) -> tuple[str, str, str, int, int]:
         )
     _, base, model, _, _ = _config
     # Checked on every call. A cached config must not skip a later --free run.
-    if only_free_model and "openrouter.ai" in base and not model.endswith(":free"):
-        raise ValueError("OpenRouter calls must use a :free model id")
+    if only_free_model and (
+        urlsplit(base).hostname != "openrouter.ai" or not model.endswith(":free")
+    ):
+        raise ValueError("--free requires OpenRouter and a :free model id")
     return _config

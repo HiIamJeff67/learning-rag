@@ -1,9 +1,37 @@
 [
   {
     "question": "Where are the rules for commenting functions written?",
-    "type": "synonym",
-    "expected": [
-      "pep-0257.rst"
+    "retrieval": [
+      {
+        "doc_id": "pep-0209.rst",
+        "score": 0.39509183865983577,
+        "start": 10920,
+        "text": "[pep-0209.rst]\n arrays, the ``__call__`` method\n    is invoked.  It gets the type of each array (if the output array\n    is not given, it is created from the coercion rules) and checks\n    the CFunc dictionary for a key that matches the argument types.\n    If it exists the operation is performed immediately, otherwise the\n    coercion rules are used to search for a related operation and set\n    of conversion functions.  The ``__call__`` method then invokes a\n    compute method written in C to iterate over slic"
+      },
+      {
+        "doc_id": "pep-0001.rst",
+        "score": 0.3778445413949088,
+        "start": 420,
+        "text": "[pep-0001.rst]\nw feature for Python or its processes or environment.  The PEP\nshould provide a concise technical specification of the feature and a\nrationale for the feature.\n\nWe intend PEPs to be the primary mechanisms for proposing major new\nfeatures, for collecting community input on an issue, and for\ndocumenting the design decisions that have gone into Python.  The PEP\nauthor is responsible for building consensus within the community and\ndocumenting dissenting opinions.\n\nBecause the PEPs are maintained as "
+      },
+      {
+        "doc_id": "pep-0276.rst",
+        "score": 0.37780482591741266,
+        "start": 6300,
+        "text": "[pep-0276.rst]\n: namely, iterators.\n\nBecause for-loops already use \"iterator\" protocol as of Python\n2.1, adding an iterator for types.IntType as proposed in this PEP\nwould enable by default the following shortcut for the indexed\nfor-loop idiom::\n\n    for rowcount in table.getRowCount():\n        print table.getValueAt(rowcount, 0)\n\nThe following benefits for this approach vis-a-vis the current\nmechanism of using the ``range()`` or ``xrange()`` functions are claimed\nto be:\n\n- Simpler,\n\n- Less cluttered,\n\n- Focus"
+      },
+      {
+        "doc_id": "pep-0269.rst",
+        "score": 0.3752393871932282,
+        "start": 4620,
+        "text": "[pep-0269.rst]\nmeric values for its nonterminals to the string names of the\nnonterminals as found in the original grammar specification\nfor the DFA.\n\n\n``stringToSymbolMap (dfa) -> dict``\n-----------------------------------\n\nThe ``stringToSymbolMap()`` function output a dictionary mapping\nthe nonterminal names of the input DFA to their corresponding\nnumeric values.\n\n\nExtra credit will be awarded if the map generation functions and\nparsing functions are also methods of the DFA extension class.\n\n\nImplementation P"
+      },
+      {
+        "doc_id": "pep-0008.rst",
+        "score": 0.3715802678087692,
+        "start": 30240,
+        "text": "[pep-0008.rst]\n=True)\n\nException Names\n~~~~~~~~~~~~~~~\n\nBecause exceptions should be classes, the class naming convention\napplies here.  However, you should use the suffix \"Error\" on your\nexception names (if the exception actually is an error).\n\nGlobal Variable Names\n~~~~~~~~~~~~~~~~~~~~~\n\n(Let's hope that these variables are meant for use inside one module\nonly.)  The conventions are about the same as those for functions.\n\nModules that are designed for use via ``from M import *`` should use\nthe ``__all__`` me"
+      }
     ],
     "retrieved": [
       "pep-0209.rst",
@@ -12,18 +40,93 @@
       "pep-0269.rst",
       "pep-0008.rst"
     ],
-    "retrieval_ms": 54.8,
-    "e2e_ms": 3779.3,
+    "context_doc_ids": [
+      "pep-0209.rst",
+      "pep-0001.rst",
+      "pep-0276.rst"
+    ],
+    "prompt": "Answer briefly from the context only. If the context does not say, reply exactly: I do not know.\n\nContext:\n[start=10920] [pep-0209.rst]\n arrays, the ``__call__`` method\n    is invoked.  It gets the type of each array (if the output array\n    is not given, it is created from the coercion rules) and checks\n    the CFunc dictionary for a key that matches the argument types.\n    If it exists the operation is performed immediately, otherwise the\n    coercion rules are used to search for a related operation and set\n    of conversion functions.  The ``__call__`` method then invokes a\n    compute method written in C to iterate over slic\n\n[start=420] [pep-0001.rst]\nw feature for Python or its processes or environment.  The PEP\nshould provide a concise technical specification of the feature and a\nrationale for the feature.\n\nWe intend PEPs to be the primary mechanisms for proposing major new\nfeatures, for collecting community input on an issue, and for\ndocumenting the design decisions that have gone into Python.  The PEP\nauthor is responsible for building consensus within the community and\ndocumenting dissenting opinions.\n\nBecause the PEPs are maintained as\n\n[start=6300] [pep-0276.rst]\n: namely, iterators.\n\nBecause for-loops already use \"iterator\" protocol as of Python\n2.1, adding an iterator for types.IntType as proposed in this PEP\nwould enable by default the following shortcut for the indexed\nfor-loop idiom::\n\n    for rowcount in table.getRowCount():\n        print table.getValueAt(rowcount, 0)\n\nThe following benefits for this approach vis-a-vis the current\nmechanism of using the ``range()`` or ``xrange()`` functions are claimed\nto be:\n\n- Simpler,\n\n- Less cluttered,\n\n- Focus\n\nQuestion: Where are the rules for commenting functions written?",
     "answer": "I do not know.",
     "answer_error": null,
+    "generation": {
+      "text": "I do not know.",
+      "request": {
+        "model": "gpt-6.1-sol",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Answer briefly from the context only. If the context does not say, reply exactly: I do not know.\n\nContext:\n[start=10920] [pep-0209.rst]\n arrays, the ``__call__`` method\n    is invoked.  It gets the type of each array (if the output array\n    is not given, it is created from the coercion rules) and checks\n    the CFunc dictionary for a key that matches the argument types.\n    If it exists the operation is performed immediately, otherwise the\n    coercion rules are used to search for a related operation and set\n    of conversion functions.  The ``__call__`` method then invokes a\n    compute method written in C to iterate over slic\n\n[start=420] [pep-0001.rst]\nw feature for Python or its processes or environment.  The PEP\nshould provide a concise technical specification of the feature and a\nrationale for the feature.\n\nWe intend PEPs to be the primary mechanisms for proposing major new\nfeatures, for collecting community input on an issue, and for\ndocumenting the design decisions that have gone into Python.  The PEP\nauthor is responsible for building consensus within the community and\ndocumenting dissenting opinions.\n\nBecause the PEPs are maintained as\n\n[start=6300] [pep-0276.rst]\n: namely, iterators.\n\nBecause for-loops already use \"iterator\" protocol as of Python\n2.1, adding an iterator for types.IntType as proposed in this PEP\nwould enable by default the following shortcut for the indexed\nfor-loop idiom::\n\n    for rowcount in table.getRowCount():\n        print table.getValueAt(rowcount, 0)\n\nThe following benefits for this approach vis-a-vis the current\nmechanism of using the ``range()`` or ``xrange()`` functions are claimed\nto be:\n\n- Simpler,\n\n- Less cluttered,\n\n- Focus\n\nQuestion: Where are the rules for commenting functions written?"
+          }
+        ],
+        "max_completion_tokens": 1200,
+        "reasoning_effort": "low"
+      },
+      "response_id": "chatcmpl-EfPwupX9Vudd9T6zeCYfxFooAgti7",
+      "model": "gpt-6.1-sol",
+      "system_fingerprint": null,
+      "finish_reason": "stop",
+      "usage": {
+        "prompt_tokens": 419,
+        "completion_tokens": 8,
+        "total_tokens": 427,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "audio_tokens": 0,
+          "accepted_prediction_tokens": 0,
+          "rejected_prediction_tokens": 0
+        }
+      }
+    },
+    "retrieval_ms": 65.588,
+    "e2e_ms": 1657.298,
+    "type": "synonym",
+    "expected": [
+      "pep-0257.rst"
+    ],
     "recall_at_5": 0.0,
-    "mrr": 0.0
+    "mrr_at_5": 0.0,
+    "all_docs_at_5": false,
+    "context_recall": 0.0,
+    "refused": true
   },
   {
     "question": "How do I write a function that pauses and resumes?",
-    "type": "synonym",
-    "expected": [
-      "pep-0255.rst"
+    "retrieval": [
+      {
+        "doc_id": "pep-0211.rst",
+        "score": 0.4186200167772701,
+        "start": 2100,
+        "text": "[pep-0211.rst]\n care whether they have to write ``mmul(A,B)``\ninstead of ``A op B``.\n\nOn the other hand, when asked how important it was to have infix\noperators for matrix solution and other operations, Prof. James\nRawlings replied [2]_:\n\n    I DON'T think it's a must have, and I do a lot of matrix\n    inversion. I cannot remember if its ``A\\b`` or ``b\\A`` so I always\n    write ``inv(A)*b`` instead. I recommend dropping ``\\``.\n\nBased on this discussion, and feedback from students at the US\nnational laboratorie"
+      },
+      {
+        "doc_id": "pep-0225.rst",
+        "score": 0.39405476745849893,
+        "start": 14700,
+        "text": "[pep-0225.rst]\nfor object and ``~op`` for element::\n\n       b = a.I - a.I * u / (c.I + v/a*u) * v / a\n\n       b = a.I - a.I * u * (c.I + v*a.I*u).I * v * a.I\n\n   - Using ``op`` for element and ``~op`` for object::\n\n       b = a.I @- a.I @* u @/ (c.I @+ v@/a@*u) @* v @/ a\n\n       b = a.I ~- a.I ~* u ~/ (c.I ~+ v~/a~*u) ~* v ~/ a\n\n       b = a.I (-) a.I (*) u (/) (c.I (+) v(/)a(*)u) (*) v (/) a\n\n       b = a.I [-] a.I [*] u [/] (c.I [+] v[/]a[*]u) [*] v [/] a\n\n       b = a.I <-> a.I <*> u </> (c.I <+> v</>a<*>u)"
+      },
+      {
+        "doc_id": "pep-0214.rst",
+        "score": 0.3545395944352991,
+        "start": 10080,
+        "text": "[pep-0214.rst]\nimportant thing is that for output, the\n  arrow points to the file.\n\n* Challenge: Surely you can design a ``println()`` function can do all\n  what ``print>>file`` can do; why isn't that enough?\n\n  Response: I think of this in terms of a simple programming\n  exercise.  Suppose a beginning programmer is asked to write a\n  function that prints the tables of multiplication.  A reasonable\n  solution is::\n\n      def tables(n):\n          for j in range(1, n+1):\n              for i in range(1, n+1):\n   "
+      },
+      {
+        "doc_id": "pep-0252.rst",
+        "score": 0.3545395944352991,
+        "start": 21840,
+        "text": "[pep-0252.rst]\nsm is new, and intended for cases\nthat don't fit in that mold, because they either require\nadditional checking, or are plain calculated attributes.  Each\nattribute here has a name, a getter C function pointer, a setter C\nfunction pointer, and a context pointer.  The function pointers\nare optional, so that for example setting the setter function\npointer to ``NULL`` makes a read-only attribute.  The context pointer\nis intended to pass auxiliary information to generic getter/setter\nfunctions, but I"
+      },
+      {
+        "doc_id": "pep-0225.rst",
+        "score": 0.3496629104486151,
+        "start": 17220,
+        "text": "[pep-0225.rst]\n`solve(a,b)``.]\n\n  It is recognized that Python provides a better solution without requiring a\n  new symbol: the ``inverse`` method ``.I`` can be made to be delayed so that\n  ``a.I*b`` and ``b*a.I`` are equivalent to Matlab's ``a\\b`` and ``b/a``.  The\n  implementation is quite simple and the resulting application code clean.\n\n- Power operator.  Python's use of ``a**b`` as ``pow(a,b)`` has two perceived\n  disadvantages:\n\n  - Most mathematicians are more familiar with ``a^b`` for this purpose.\n  -"
+      }
     ],
     "retrieved": [
       "pep-0211.rst",
@@ -32,18 +135,93 @@
       "pep-0252.rst",
       "pep-0225.rst"
     ],
-    "retrieval_ms": 49.3,
-    "e2e_ms": 3128.5,
+    "context_doc_ids": [
+      "pep-0211.rst",
+      "pep-0225.rst",
+      "pep-0214.rst"
+    ],
+    "prompt": "Answer briefly from the context only. If the context does not say, reply exactly: I do not know.\n\nContext:\n[start=2100] [pep-0211.rst]\n care whether they have to write ``mmul(A,B)``\ninstead of ``A op B``.\n\nOn the other hand, when asked how important it was to have infix\noperators for matrix solution and other operations, Prof. James\nRawlings replied [2]_:\n\n    I DON'T think it's a must have, and I do a lot of matrix\n    inversion. I cannot remember if its ``A\\b`` or ``b\\A`` so I always\n    write ``inv(A)*b`` instead. I recommend dropping ``\\``.\n\nBased on this discussion, and feedback from students at the US\nnational laboratorie\n\n[start=14700] [pep-0225.rst]\nfor object and ``~op`` for element::\n\n       b = a.I - a.I * u / (c.I + v/a*u) * v / a\n\n       b = a.I - a.I * u * (c.I + v*a.I*u).I * v * a.I\n\n   - Using ``op`` for element and ``~op`` for object::\n\n       b = a.I @- a.I @* u @/ (c.I @+ v@/a@*u) @* v @/ a\n\n       b = a.I ~- a.I ~* u ~/ (c.I ~+ v~/a~*u) ~* v ~/ a\n\n       b = a.I (-) a.I (*) u (/) (c.I (+) v(/)a(*)u) (*) v (/) a\n\n       b = a.I [-] a.I [*] u [/] (c.I [+] v[/]a[*]u) [*] v [/] a\n\n       b = a.I <-> a.I <*> u </> (c.I <+> v</>a<*>u)\n\n[start=10080] [pep-0214.rst]\nimportant thing is that for output, the\n  arrow points to the file.\n\n* Challenge: Surely you can design a ``println()`` function can do all\n  what ``print>>file`` can do; why isn't that enough?\n\n  Response: I think of this in terms of a simple programming\n  exercise.  Suppose a beginning programmer is asked to write a\n  function that prints the tables of multiplication.  A reasonable\n  solution is::\n\n      def tables(n):\n          for j in range(1, n+1):\n              for i in range(1, n+1):\n\nQuestion: How do I write a function that pauses and resumes?",
     "answer": "I do not know.",
     "answer_error": null,
+    "generation": {
+      "text": "I do not know.",
+      "request": {
+        "model": "gpt-6.1-sol",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Answer briefly from the context only. If the context does not say, reply exactly: I do not know.\n\nContext:\n[start=2100] [pep-0211.rst]\n care whether they have to write ``mmul(A,B)``\ninstead of ``A op B``.\n\nOn the other hand, when asked how important it was to have infix\noperators for matrix solution and other operations, Prof. James\nRawlings replied [2]_:\n\n    I DON'T think it's a must have, and I do a lot of matrix\n    inversion. I cannot remember if its ``A\\b`` or ``b\\A`` so I always\n    write ``inv(A)*b`` instead. I recommend dropping ``\\``.\n\nBased on this discussion, and feedback from students at the US\nnational laboratorie\n\n[start=14700] [pep-0225.rst]\nfor object and ``~op`` for element::\n\n       b = a.I - a.I * u / (c.I + v/a*u) * v / a\n\n       b = a.I - a.I * u * (c.I + v*a.I*u).I * v * a.I\n\n   - Using ``op`` for element and ``~op`` for object::\n\n       b = a.I @- a.I @* u @/ (c.I @+ v@/a@*u) @* v @/ a\n\n       b = a.I ~- a.I ~* u ~/ (c.I ~+ v~/a~*u) ~* v ~/ a\n\n       b = a.I (-) a.I (*) u (/) (c.I (+) v(/)a(*)u) (*) v (/) a\n\n       b = a.I [-] a.I [*] u [/] (c.I [+] v[/]a[*]u) [*] v [/] a\n\n       b = a.I <-> a.I <*> u </> (c.I <+> v</>a<*>u)\n\n[start=10080] [pep-0214.rst]\nimportant thing is that for output, the\n  arrow points to the file.\n\n* Challenge: Surely you can design a ``println()`` function can do all\n  what ``print>>file`` can do; why isn't that enough?\n\n  Response: I think of this in terms of a simple programming\n  exercise.  Suppose a beginning programmer is asked to write a\n  function that prints the tables of multiplication.  A reasonable\n  solution is::\n\n      def tables(n):\n          for j in range(1, n+1):\n              for i in range(1, n+1):\n\nQuestion: How do I write a function that pauses and resumes?"
+          }
+        ],
+        "max_completion_tokens": 1200,
+        "reasoning_effort": "low"
+      },
+      "response_id": "chatcmpl-EfPwy21rJXH17YqF1ChoZ5uEyQe4n",
+      "model": "gpt-6.1-sol",
+      "system_fingerprint": null,
+      "finish_reason": "stop",
+      "usage": {
+        "prompt_tokens": 567,
+        "completion_tokens": 8,
+        "total_tokens": 575,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "audio_tokens": 0,
+          "accepted_prediction_tokens": 0,
+          "rejected_prediction_tokens": 0
+        }
+      }
+    },
+    "retrieval_ms": 62.415,
+    "e2e_ms": 1522.737,
+    "type": "synonym",
+    "expected": [
+      "pep-0255.rst"
+    ],
     "recall_at_5": 0.0,
-    "mrr": 0.0
+    "mrr_at_5": 0.0,
+    "all_docs_at_5": false,
+    "context_recall": 0.0,
+    "refused": true
   },
   {
     "question": "How does a source file declare its character set?",
-    "type": "synonym",
-    "expected": [
-      "pep-0263.rst"
+    "retrieval": [
+      {
+        "doc_id": "pep-0232.rst",
+        "score": 0.2807449625374386,
+        "start": 2100,
+        "text": "[pep-0232.rst]\n__`` can also be set, but only to a\ndictionary object.  Deleting a function's ``__dict__``, or setting\nit to anything other than a concrete dictionary object results in a\n``TypeError``.  If no function attributes have ever been set, the\nfunction's ``__dict__`` will be empty.\n\n\nExamples\n========\n\nHere are some examples of what you can do with this feature.\n\n::\n\n    def a():\n        pass\n\n    a.publish = 1\n    a.unittest = '''...'''\n\n    if a.publish:\n        print a()\n\n    if hasattr(a, 'unittest"
+      },
+      {
+        "doc_id": "pep-0214.rst",
+        "score": 0.2756035436010373,
+        "start": 4200,
+        "text": "[pep-0214.rst]\nywords')\n        file.write(sep.join(map(str, args)) + end)\n\n``writeln()`` takes a three optional keyword arguments.  In the\ncontext of this proposal, the relevant argument is 'file' which\ncan be set to a file-like object with a ``write()`` method.  Thus::\n\n    print >> mylogfile, 'this goes to my log file'\n\nwould be written as::\n\n    writeln('this goes to my log file', file=mylogfile)\n\n``writeln()`` has the additional functionality that the keyword\nargument 'nl' is a flag specifying whether to "
+      },
+      {
+        "doc_id": "pep-0277.rst",
+        "score": 0.25717224993681986,
+        "start": 1260,
+        "text": "[pep-0277.rst]\nard Python file object and posix module and so provide\naccess to all files on Windows NT.\n\n\nSpecification\n=============\n\nOn Windows platforms which provide wide-character file APIs, when\nUnicode arguments are provided to file APIs, wide-character calls\nare made instead of the standard C library and posix calls.\n\nThe Python file object is extended to use a Unicode file name\nargument directly rather than converting it.  This affects the\nfile object constructor ``file(filename[, mode[, bufsize]])``"
+      },
+      {
+        "doc_id": "pep-0218.rst",
+        "score": 0.2519763153394848,
+        "start": 3360,
+        "text": "[pep-0218.rst]\n    Make a new set.\n\n``s.issuperset()``  Check for a superset relationship.\n\n``s.issubset()``    Check for a subset relationship.\n==================  =============================================\n\nand two new built-in conversion functions:\n\n================  ===============================================\n``set(x)``        Create a set containing the elements of the\n                  collection \"x\".\n\n``frozenset(x)``  Create an immutable set containing the elements\n                  of the colle"
+      },
+      {
+        "doc_id": "pep-0100.rst",
+        "score": 0.2501595914621521,
+        "start": 15540,
+        "text": "[pep-0100.rst]\n a file-like object open for writing\n               (binary) data.\n\n               The StreamWriter may implement different error handling\n               schemes by providing the errors keyword argument.\n               These parameters are defined:\n\n                 'strict' - raise a ValueError (or a subclass)\n                 'ignore' - ignore the character and continue with the next\n                 'replace'- replace with a suitable replacement character\n            \"\"\"\n            self.stre"
+      }
     ],
     "retrieved": [
       "pep-0232.rst",
@@ -52,18 +230,93 @@
       "pep-0218.rst",
       "pep-0100.rst"
     ],
-    "retrieval_ms": 52.9,
-    "e2e_ms": 3632.3,
-    "answer": "I do not know",
+    "context_doc_ids": [
+      "pep-0232.rst",
+      "pep-0214.rst",
+      "pep-0277.rst"
+    ],
+    "prompt": "Answer briefly from the context only. If the context does not say, reply exactly: I do not know.\n\nContext:\n[start=2100] [pep-0232.rst]\n__`` can also be set, but only to a\ndictionary object.  Deleting a function's ``__dict__``, or setting\nit to anything other than a concrete dictionary object results in a\n``TypeError``.  If no function attributes have ever been set, the\nfunction's ``__dict__`` will be empty.\n\n\nExamples\n========\n\nHere are some examples of what you can do with this feature.\n\n::\n\n    def a():\n        pass\n\n    a.publish = 1\n    a.unittest = '''...'''\n\n    if a.publish:\n        print a()\n\n    if hasattr(a, 'unittest\n\n[start=4200] [pep-0214.rst]\nywords')\n        file.write(sep.join(map(str, args)) + end)\n\n``writeln()`` takes a three optional keyword arguments.  In the\ncontext of this proposal, the relevant argument is 'file' which\ncan be set to a file-like object with a ``write()`` method.  Thus::\n\n    print >> mylogfile, 'this goes to my log file'\n\nwould be written as::\n\n    writeln('this goes to my log file', file=mylogfile)\n\n``writeln()`` has the additional functionality that the keyword\nargument 'nl' is a flag specifying whether to\n\n[start=1260] [pep-0277.rst]\nard Python file object and posix module and so provide\naccess to all files on Windows NT.\n\n\nSpecification\n=============\n\nOn Windows platforms which provide wide-character file APIs, when\nUnicode arguments are provided to file APIs, wide-character calls\nare made instead of the standard C library and posix calls.\n\nThe Python file object is extended to use a Unicode file name\nargument directly rather than converting it.  This affects the\nfile object constructor ``file(filename[, mode[, bufsize]])``\n\nQuestion: How does a source file declare its character set?",
+    "answer": "I do not know.",
     "answer_error": null,
+    "generation": {
+      "text": "I do not know.",
+      "request": {
+        "model": "gpt-6.1-sol",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Answer briefly from the context only. If the context does not say, reply exactly: I do not know.\n\nContext:\n[start=2100] [pep-0232.rst]\n__`` can also be set, but only to a\ndictionary object.  Deleting a function's ``__dict__``, or setting\nit to anything other than a concrete dictionary object results in a\n``TypeError``.  If no function attributes have ever been set, the\nfunction's ``__dict__`` will be empty.\n\n\nExamples\n========\n\nHere are some examples of what you can do with this feature.\n\n::\n\n    def a():\n        pass\n\n    a.publish = 1\n    a.unittest = '''...'''\n\n    if a.publish:\n        print a()\n\n    if hasattr(a, 'unittest\n\n[start=4200] [pep-0214.rst]\nywords')\n        file.write(sep.join(map(str, args)) + end)\n\n``writeln()`` takes a three optional keyword arguments.  In the\ncontext of this proposal, the relevant argument is 'file' which\ncan be set to a file-like object with a ``write()`` method.  Thus::\n\n    print >> mylogfile, 'this goes to my log file'\n\nwould be written as::\n\n    writeln('this goes to my log file', file=mylogfile)\n\n``writeln()`` has the additional functionality that the keyword\nargument 'nl' is a flag specifying whether to\n\n[start=1260] [pep-0277.rst]\nard Python file object and posix module and so provide\naccess to all files on Windows NT.\n\n\nSpecification\n=============\n\nOn Windows platforms which provide wide-character file APIs, when\nUnicode arguments are provided to file APIs, wide-character calls\nare made instead of the standard C library and posix calls.\n\nThe Python file object is extended to use a Unicode file name\nargument directly rather than converting it.  This affects the\nfile object constructor ``file(filename[, mode[, bufsize]])``\n\nQuestion: How does a source file declare its character set?"
+          }
+        ],
+        "max_completion_tokens": 1200,
+        "reasoning_effort": "low"
+      },
+      "response_id": "chatcmpl-EfPwzPlOsm1O9yUaXO4tlbhBc6vfC",
+      "model": "gpt-6.1-sol",
+      "system_fingerprint": null,
+      "finish_reason": "stop",
+      "usage": {
+        "prompt_tokens": 436,
+        "completion_tokens": 8,
+        "total_tokens": 444,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "audio_tokens": 0,
+          "accepted_prediction_tokens": 0,
+          "rejected_prediction_tokens": 0
+        }
+      }
+    },
+    "retrieval_ms": 65.687,
+    "e2e_ms": 1524.417,
+    "type": "synonym",
+    "expected": [
+      "pep-0263.rst"
+    ],
     "recall_at_5": 0.0,
-    "mrr": 0.0
+    "mrr_at_5": 0.0,
+    "all_docs_at_5": false,
+    "context_recall": 0.0,
+    "refused": true
   },
   {
     "question": "Update a name by adding to its current value",
-    "type": "synonym",
-    "expected": [
-      "pep-0203.rst"
+    "retrieval": [
+      {
+        "doc_id": "pep-0247.rst",
+        "score": 0.3417430630867044,
+        "start": 1680,
+        "text": "[pep-0247.rst]\nutput\n   sizes, and they should default to values believed to be secure.\n\nHash function modules define one variable:\n\n| ``digest_size``\n\n   An integer value; the size of the digest produced by the hashing objects\n   created by this module, measured in bytes. You could also obtain this value\n   by creating a sample object and accessing its ``digest_size`` attribute, but\n   it can be convenient to have this value available from the module. Hashes\n   with a variable output size will set this variab"
+      },
+      {
+        "doc_id": "pep-0221.rst",
+        "score": 0.3323514951671938,
+        "start": 420,
+        "text": "[pep-0221.rst]\nsion history of this file\ncontains the definitive historical record.\n\n\nRationale\n=========\n\nThis PEP proposes an extension of Python syntax regarding the\n``import`` and ``from <module> import`` statements.  These statements\nload in a module, and either bind that module to a local name, or\nbinds objects from that module to a local name.  However, it is\nsometimes desirable to bind those objects to a different name, for\ninstance to avoid name clashes.  This can currently be achieved\nusing the follo"
+      },
+      {
+        "doc_id": "pep-0258.rst",
+        "score": 0.32551538350846376,
+        "start": 7560,
+        "text": "[pep-0258.rst]\nattribute which is used by\nthe Transformer to apply transforms in order (low to high).  The\ndefault priority can be overridden when adding transforms to the\nTransformer object.\n\nTransformer responsibilities:\n\n* Apply transforms to the document tree, in priority order.\n\n* Store a mapping of component type name ('reader', 'writer', etc.) to\n  component objects.  These are used by certain transforms (such as\n  \"components.Filter\") to determine suitability.\n\nTransform responsibilities:\n\n* Modify a d"
+      },
+      {
+        "doc_id": "pep-0272.rst",
+        "score": 0.32388854019250557,
+        "start": 5880,
+        "text": "[pep-0272.rst]\nring '') as\n  a variable-length key.\n\n\nCipher objects should have two attributes:\n\n- block_size\n\n  An integer value equal to the size of the blocks encrypted by\n  this object.  For algorithms with a variable block size, this\n  value is equal to the block size selected for this object.\n\n- IV\n\n  Contains the initial value which will be used to start a\n  cipher feedback mode; it will always be a string exactly one\n  block in length.  After encrypting or decrypting a string,\n  this value is updated "
+      },
+      {
+        "doc_id": "pep-0227.rst",
+        "score": 0.31900676594484284,
+        "start": 9240,
+        "text": "[pep-0227.rst]\nsequence, it is not possible to rebind a name defined in an\nenclosing scope.  An assignment operation can only bind a name in\nthe current scope or in the global scope.  The lack of\ndeclarations and the inability to rebind names in enclosing scopes\nare unusual for lexically scoped languages; there is typically a\nmechanism to create name bindings (e.g. lambda and let in Scheme)\nand a mechanism to change the bindings (set! in Scheme).\n\n\nExamples\n========\n\nA few examples are included to illustrate t"
+      }
     ],
     "retrieved": [
       "pep-0247.rst",
@@ -72,18 +325,93 @@
       "pep-0272.rst",
       "pep-0227.rst"
     ],
-    "retrieval_ms": 52.4,
-    "e2e_ms": 5636.8,
+    "context_doc_ids": [
+      "pep-0247.rst",
+      "pep-0221.rst",
+      "pep-0258.rst"
+    ],
+    "prompt": "Answer briefly from the context only. If the context does not say, reply exactly: I do not know.\n\nContext:\n[start=1680] [pep-0247.rst]\nutput\n   sizes, and they should default to values believed to be secure.\n\nHash function modules define one variable:\n\n| ``digest_size``\n\n   An integer value; the size of the digest produced by the hashing objects\n   created by this module, measured in bytes. You could also obtain this value\n   by creating a sample object and accessing its ``digest_size`` attribute, but\n   it can be convenient to have this value available from the module. Hashes\n   with a variable output size will set this variab\n\n[start=420] [pep-0221.rst]\nsion history of this file\ncontains the definitive historical record.\n\n\nRationale\n=========\n\nThis PEP proposes an extension of Python syntax regarding the\n``import`` and ``from <module> import`` statements.  These statements\nload in a module, and either bind that module to a local name, or\nbinds objects from that module to a local name.  However, it is\nsometimes desirable to bind those objects to a different name, for\ninstance to avoid name clashes.  This can currently be achieved\nusing the follo\n\n[start=7560] [pep-0258.rst]\nattribute which is used by\nthe Transformer to apply transforms in order (low to high).  The\ndefault priority can be overridden when adding transforms to the\nTransformer object.\n\nTransformer responsibilities:\n\n* Apply transforms to the document tree, in priority order.\n\n* Store a mapping of component type name ('reader', 'writer', etc.) to\n  component objects.  These are used by certain transforms (such as\n  \"components.Filter\") to determine suitability.\n\nTransform responsibilities:\n\n* Modify a d\n\nQuestion: Update a name by adding to its current value",
     "answer": "I do not know.",
     "answer_error": null,
+    "generation": {
+      "text": "I do not know.",
+      "request": {
+        "model": "gpt-6.1-sol",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Answer briefly from the context only. If the context does not say, reply exactly: I do not know.\n\nContext:\n[start=1680] [pep-0247.rst]\nutput\n   sizes, and they should default to values believed to be secure.\n\nHash function modules define one variable:\n\n| ``digest_size``\n\n   An integer value; the size of the digest produced by the hashing objects\n   created by this module, measured in bytes. You could also obtain this value\n   by creating a sample object and accessing its ``digest_size`` attribute, but\n   it can be convenient to have this value available from the module. Hashes\n   with a variable output size will set this variab\n\n[start=420] [pep-0221.rst]\nsion history of this file\ncontains the definitive historical record.\n\n\nRationale\n=========\n\nThis PEP proposes an extension of Python syntax regarding the\n``import`` and ``from <module> import`` statements.  These statements\nload in a module, and either bind that module to a local name, or\nbinds objects from that module to a local name.  However, it is\nsometimes desirable to bind those objects to a different name, for\ninstance to avoid name clashes.  This can currently be achieved\nusing the follo\n\n[start=7560] [pep-0258.rst]\nattribute which is used by\nthe Transformer to apply transforms in order (low to high).  The\ndefault priority can be overridden when adding transforms to the\nTransformer object.\n\nTransformer responsibilities:\n\n* Apply transforms to the document tree, in priority order.\n\n* Store a mapping of component type name ('reader', 'writer', etc.) to\n  component objects.  These are used by certain transforms (such as\n  \"components.Filter\") to determine suitability.\n\nTransform responsibilities:\n\n* Modify a d\n\nQuestion: Update a name by adding to its current value"
+          }
+        ],
+        "max_completion_tokens": 1200,
+        "reasoning_effort": "low"
+      },
+      "response_id": "chatcmpl-EfPx4pydToShsSBS2ndALbrP6rlHA",
+      "model": "gpt-6.1-sol",
+      "system_fingerprint": null,
+      "finish_reason": "stop",
+      "usage": {
+        "prompt_tokens": 400,
+        "completion_tokens": 8,
+        "total_tokens": 408,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "audio_tokens": 0,
+          "accepted_prediction_tokens": 0,
+          "rejected_prediction_tokens": 0
+        }
+      }
+    },
+    "retrieval_ms": 66.042,
+    "e2e_ms": 2135.646,
+    "type": "synonym",
+    "expected": [
+      "pep-0203.rst"
+    ],
     "recall_at_5": 0.0,
-    "mrr": 0.0
+    "mrr_at_5": 0.0,
+    "all_docs_at_5": false,
+    "context_recall": 0.0,
+    "refused": true
   },
   {
     "question": "Load a module from a compressed bundle",
-    "type": "synonym",
-    "expected": [
-      "pep-0273.rst"
+    "retrieval": [
+      {
+        "doc_id": "pep-0246.rst",
+        "score": 0.49552943083144424,
+        "start": 19320,
+        "text": "[pep-0246.rst]\n------\n    test.py\n    -----------------------------------------------------------------\n    from adapt import AdaptationError, LiskovViolation, adapt\n    from adapt import registerAdapterFactory, unregisterAdapterFactory\n    import doctest\n\n    class A(object):\n        '''\n        >>> a = A()\n        >>> a is adapt(a, A)   # case (a)\n        True\n        '''\n\n    class B(A):\n        '''\n        >>> b = B()\n        >>> b is adapt(b, A)   # case (d)\n        True\n        '''\n\n    class C(object):\n"
+      },
+      {
+        "doc_id": "pep-0236.rst",
+        "score": 0.47721942193769407,
+        "start": 2520,
+        "text": "[pep-0236.rst]\ne:\n\n+ The module docstring (if any).\n+ Comments.\n+ Blank lines.\n+ Other future_statements.\n\nExample::\n\n    \"\"\"This is a module docstring.\"\"\"\n\n    # This is a comment, preceded by a blank line and followed by\n    # a future_statement.\n    from __future__ import nested_scopes\n\n    from math import sin\n    from __future__ import alabaster_weenoblobs  # compile-time error!\n    # That was an error because preceded by a non-future_statement.\n\n\nSemantics\n=========\n\nA future_statement is recognized and "
+      },
+      {
+        "doc_id": "pep-0232.rst",
+        "score": 0.46790827089573095,
+        "start": 2100,
+        "text": "[pep-0232.rst]\n__`` can also be set, but only to a\ndictionary object.  Deleting a function's ``__dict__``, or setting\nit to anything other than a concrete dictionary object results in a\n``TypeError``.  If no function attributes have ever been set, the\nfunction's ``__dict__`` will be empty.\n\n\nExamples\n========\n\nHere are some examples of what you can do with this feature.\n\n::\n\n    def a():\n        pass\n\n    a.publish = 1\n    a.unittest = '''...'''\n\n    if a.publish:\n        print a()\n\n    if hasattr(a, 'unittest"
+      },
+      {
+        "doc_id": "pep-0231.rst",
+        "score": 0.46126560401444255,
+        "start": 10920,
+        "text": "[pep-0231.rst]\ns A(Implicit):\n        def report(self):\n            return self.color\n\n    # simple implicit acquisition\n    c = C()\n    a = A()\n    c.a = a\n    assert c.a.report() == 'red'\n\n    d = C()\n    d.color = 'green'\n    d.a = a\n    assert d.a.report() == 'green'\n\n    try:\n        a.report()\n    except AttributeError:\n        pass\n    else:\n        assert 0, 'AttributeError expected'\n\n\n    # special names\n    assert c.a.aq_parent is c\n    assert c.a.aq_self is a\n\n    c.a.d = d\n    assert c.a.d.aq_base "
+      },
+      {
+        "doc_id": "pep-0232.rst",
+        "score": 0.45256282220142047,
+        "start": 2520,
+        "text": "[pep-0232.rst]\nst = '''...'''\n\n    if a.publish:\n        print a()\n\n    if hasattr(a, 'unittest'):\n        testframework.execute(a.unittest)\n\n    class C:\n        def a(self):\n            'just a docstring'\n            a.publish = 1\n\n    c = C()\n    if c.a.publish:\n        publish(c.a())\n\n\nOther Uses\n----------\n\nPaul Prescod enumerated a bunch of other uses on the `python-dev thread`_.\n\n.. _python-dev thread: https://mail.python.org/pipermail/python-dev/2000-April/003364.html\n\n\nFuture Directions\n=============="
+      }
     ],
     "retrieved": [
       "pep-0246.rst",
@@ -92,19 +420,93 @@
       "pep-0231.rst",
       "pep-0232.rst"
     ],
-    "retrieval_ms": 55.8,
-    "e2e_ms": 3989.7,
+    "context_doc_ids": [
+      "pep-0246.rst",
+      "pep-0236.rst",
+      "pep-0232.rst"
+    ],
+    "prompt": "Answer briefly from the context only. If the context does not say, reply exactly: I do not know.\n\nContext:\n[start=19320] [pep-0246.rst]\n------\n    test.py\n    -----------------------------------------------------------------\n    from adapt import AdaptationError, LiskovViolation, adapt\n    from adapt import registerAdapterFactory, unregisterAdapterFactory\n    import doctest\n\n    class A(object):\n        '''\n        >>> a = A()\n        >>> a is adapt(a, A)   # case (a)\n        True\n        '''\n\n    class B(A):\n        '''\n        >>> b = B()\n        >>> b is adapt(b, A)   # case (d)\n        True\n        '''\n\n    class C(object):\n\n[start=2520] [pep-0236.rst]\ne:\n\n+ The module docstring (if any).\n+ Comments.\n+ Blank lines.\n+ Other future_statements.\n\nExample::\n\n    \"\"\"This is a module docstring.\"\"\"\n\n    # This is a comment, preceded by a blank line and followed by\n    # a future_statement.\n    from __future__ import nested_scopes\n\n    from math import sin\n    from __future__ import alabaster_weenoblobs  # compile-time error!\n    # That was an error because preceded by a non-future_statement.\n\n\nSemantics\n=========\n\nA future_statement is recognized and\n\n[start=2100] [pep-0232.rst]\n__`` can also be set, but only to a\ndictionary object.  Deleting a function's ``__dict__``, or setting\nit to anything other than a concrete dictionary object results in a\n``TypeError``.  If no function attributes have ever been set, the\nfunction's ``__dict__`` will be empty.\n\n\nExamples\n========\n\nHere are some examples of what you can do with this feature.\n\n::\n\n    def a():\n        pass\n\n    a.publish = 1\n    a.unittest = '''...'''\n\n    if a.publish:\n        print a()\n\n    if hasattr(a, 'unittest\n\nQuestion: Load a module from a compressed bundle",
     "answer": "I do not know.",
     "answer_error": null,
+    "generation": {
+      "text": "I do not know.",
+      "request": {
+        "model": "gpt-6.1-sol",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Answer briefly from the context only. If the context does not say, reply exactly: I do not know.\n\nContext:\n[start=19320] [pep-0246.rst]\n------\n    test.py\n    -----------------------------------------------------------------\n    from adapt import AdaptationError, LiskovViolation, adapt\n    from adapt import registerAdapterFactory, unregisterAdapterFactory\n    import doctest\n\n    class A(object):\n        '''\n        >>> a = A()\n        >>> a is adapt(a, A)   # case (a)\n        True\n        '''\n\n    class B(A):\n        '''\n        >>> b = B()\n        >>> b is adapt(b, A)   # case (d)\n        True\n        '''\n\n    class C(object):\n\n[start=2520] [pep-0236.rst]\ne:\n\n+ The module docstring (if any).\n+ Comments.\n+ Blank lines.\n+ Other future_statements.\n\nExample::\n\n    \"\"\"This is a module docstring.\"\"\"\n\n    # This is a comment, preceded by a blank line and followed by\n    # a future_statement.\n    from __future__ import nested_scopes\n\n    from math import sin\n    from __future__ import alabaster_weenoblobs  # compile-time error!\n    # That was an error because preceded by a non-future_statement.\n\n\nSemantics\n=========\n\nA future_statement is recognized and\n\n[start=2100] [pep-0232.rst]\n__`` can also be set, but only to a\ndictionary object.  Deleting a function's ``__dict__``, or setting\nit to anything other than a concrete dictionary object results in a\n``TypeError``.  If no function attributes have ever been set, the\nfunction's ``__dict__`` will be empty.\n\n\nExamples\n========\n\nHere are some examples of what you can do with this feature.\n\n::\n\n    def a():\n        pass\n\n    a.publish = 1\n    a.unittest = '''...'''\n\n    if a.publish:\n        print a()\n\n    if hasattr(a, 'unittest\n\nQuestion: Load a module from a compressed bundle"
+          }
+        ],
+        "max_completion_tokens": 1200,
+        "reasoning_effort": "low"
+      },
+      "response_id": "chatcmpl-EfPx9CzjkaO79dubiVFyFLh0crUwF",
+      "model": "gpt-6.1-sol",
+      "system_fingerprint": null,
+      "finish_reason": "stop",
+      "usage": {
+        "prompt_tokens": 436,
+        "completion_tokens": 8,
+        "total_tokens": 444,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "audio_tokens": 0,
+          "accepted_prediction_tokens": 0,
+          "rejected_prediction_tokens": 0
+        }
+      }
+    },
+    "retrieval_ms": 65.709,
+    "e2e_ms": 1509.511,
+    "type": "synonym",
+    "expected": [
+      "pep-0273.rst"
+    ],
     "recall_at_5": 0.0,
-    "mrr": 0.0
+    "mrr_at_5": 0.0,
+    "all_docs_at_5": false,
+    "context_recall": 0.0,
+    "refused": true
   },
   {
     "question": "Which file is the Zen of Python and which file explains what PEP means?",
-    "type": "multi-hop",
-    "expected": [
-      "pep-0020.rst",
-      "pep-0001.rst"
+    "retrieval": [
+      {
+        "doc_id": "pep-0277.rst",
+        "score": 0.4909902530309829,
+        "start": 1260,
+        "text": "[pep-0277.rst]\nard Python file object and posix module and so provide\naccess to all files on Windows NT.\n\n\nSpecification\n=============\n\nOn Windows platforms which provide wide-character file APIs, when\nUnicode arguments are provided to file APIs, wide-character calls\nare made instead of the standard C library and posix calls.\n\nThe Python file object is extended to use a Unicode file name\nargument directly rather than converting it.  This affects the\nfile object constructor ``file(filename[, mode[, bufsize]])``"
+      },
+      {
+        "doc_id": "pep-0012.rst",
+        "score": 0.48695725815898133,
+        "start": 2100,
+        "text": "[pep-0012.rst]\nread :pep:`1` for details,\nor open a tracker issue on the PEPs repo to ask for assistance.\n\nOnce you've decided which type of PEP yours is going to be, follow the\ndirections below.\n\n- Make a copy of this file (the ``.rst`` file, **not** the HTML!) and\n  perform the following edits. Name the new file :file:`pep-{NNNN}.rst`, using\n  the next available number (not used by a published or in-PR PEP).\n\n- Replace the \"PEP: 12\" header with \"PEP: NNNN\",\n  matching the file name. Note that the file name s"
+      },
+      {
+        "doc_id": "pep-0277.rst",
+        "score": 0.4762424844460751,
+        "start": 1680,
+        "text": "[pep-0277.rst]\n  This affects the\nfile object constructor ``file(filename[, mode[, bufsize]])`` and also\nthe ``open`` function which is an alias of this constructor.  When a\nUnicode filename argument is used here then the ``name`` attribute of\nthe file object will be Unicode.  The representation of a file\nobject, ``repr(f)`` will display Unicode file names as an escaped\nstring in a similar manner to the representation of Unicode\nstrings.\n\nThe ``posix`` module contains functions that take file or directory\nname"
+      },
+      {
+        "doc_id": "pep-0263.rst",
+        "score": 0.4326550301203769,
+        "start": 4200,
+        "text": "[pep-0263.rst]\n      ...\n\n\nConcepts\n========\n\nThe PEP is based on the following concepts which would have to be\nimplemented to enable usage of such a magic comment:\n\n1. The complete Python source file should use a single encoding.\n   Embedding of differently encoded data is not allowed and will\n   result in a decoding error during compilation of the Python\n   source code.\n\n   Any encoding which allows processing the first two lines in the\n   way indicated above is allowed as source code encoding, this\n   inclu"
+      },
+      {
+        "doc_id": "pep-0009.rst",
+        "score": 0.429925318137234,
+        "start": 1680,
+        "text": "[pep-0009.rst]\nlate you must first decide whether your PEP is\n      going to be an Informational or Standards Track PEP.  Most PEPs\n      are Standards Track because they propose a new feature for the\n      Python language or standard library.  When in doubt, read PEP 1\n      for details or contact the PEP editors <peps@python.org>.\n\n      Once you've decided which type of PEP yours is going to be, follow\n      the directions below.\n\n      - Make a copy of this file (.txt file, not HTML!) and perform the\n     "
+      }
     ],
     "retrieved": [
       "pep-0277.rst",
@@ -113,19 +515,94 @@
       "pep-0263.rst",
       "pep-0009.rst"
     ],
-    "retrieval_ms": 55.8,
-    "e2e_ms": 5194.4,
+    "context_doc_ids": [
+      "pep-0277.rst",
+      "pep-0012.rst",
+      "pep-0277.rst"
+    ],
+    "prompt": "Answer briefly from the context only. If the context does not say, reply exactly: I do not know.\n\nContext:\n[start=1260] [pep-0277.rst]\nard Python file object and posix module and so provide\naccess to all files on Windows NT.\n\n\nSpecification\n=============\n\nOn Windows platforms which provide wide-character file APIs, when\nUnicode arguments are provided to file APIs, wide-character calls\nare made instead of the standard C library and posix calls.\n\nThe Python file object is extended to use a Unicode file name\nargument directly rather than converting it.  This affects the\nfile object constructor ``file(filename[, mode[, bufsize]])``\n\n[start=2100] [pep-0012.rst]\nread :pep:`1` for details,\nor open a tracker issue on the PEPs repo to ask for assistance.\n\nOnce you've decided which type of PEP yours is going to be, follow the\ndirections below.\n\n- Make a copy of this file (the ``.rst`` file, **not** the HTML!) and\n  perform the following edits. Name the new file :file:`pep-{NNNN}.rst`, using\n  the next available number (not used by a published or in-PR PEP).\n\n- Replace the \"PEP: 12\" header with \"PEP: NNNN\",\n  matching the file name. Note that the file name s\n\n[start=1680] [pep-0277.rst]\n  This affects the\nfile object constructor ``file(filename[, mode[, bufsize]])`` and also\nthe ``open`` function which is an alias of this constructor.  When a\nUnicode filename argument is used here then the ``name`` attribute of\nthe file object will be Unicode.  The representation of a file\nobject, ``repr(f)`` will display Unicode file names as an escaped\nstring in a similar manner to the representation of Unicode\nstrings.\n\nThe ``posix`` module contains functions that take file or directory\nname\n\nQuestion: Which file is the Zen of Python and which file explains what PEP means?",
     "answer": "I do not know.",
     "answer_error": null,
+    "generation": {
+      "text": "I do not know.",
+      "request": {
+        "model": "gpt-6.1-sol",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Answer briefly from the context only. If the context does not say, reply exactly: I do not know.\n\nContext:\n[start=1260] [pep-0277.rst]\nard Python file object and posix module and so provide\naccess to all files on Windows NT.\n\n\nSpecification\n=============\n\nOn Windows platforms which provide wide-character file APIs, when\nUnicode arguments are provided to file APIs, wide-character calls\nare made instead of the standard C library and posix calls.\n\nThe Python file object is extended to use a Unicode file name\nargument directly rather than converting it.  This affects the\nfile object constructor ``file(filename[, mode[, bufsize]])``\n\n[start=2100] [pep-0012.rst]\nread :pep:`1` for details,\nor open a tracker issue on the PEPs repo to ask for assistance.\n\nOnce you've decided which type of PEP yours is going to be, follow the\ndirections below.\n\n- Make a copy of this file (the ``.rst`` file, **not** the HTML!) and\n  perform the following edits. Name the new file :file:`pep-{NNNN}.rst`, using\n  the next available number (not used by a published or in-PR PEP).\n\n- Replace the \"PEP: 12\" header with \"PEP: NNNN\",\n  matching the file name. Note that the file name s\n\n[start=1680] [pep-0277.rst]\n  This affects the\nfile object constructor ``file(filename[, mode[, bufsize]])`` and also\nthe ``open`` function which is an alias of this constructor.  When a\nUnicode filename argument is used here then the ``name`` attribute of\nthe file object will be Unicode.  The representation of a file\nobject, ``repr(f)`` will display Unicode file names as an escaped\nstring in a similar manner to the representation of Unicode\nstrings.\n\nThe ``posix`` module contains functions that take file or directory\nname\n\nQuestion: Which file is the Zen of Python and which file explains what PEP means?"
+          }
+        ],
+        "max_completion_tokens": 1200,
+        "reasoning_effort": "low"
+      },
+      "response_id": "chatcmpl-EfPxACbWtEnTVMFbHwNLoj3248FfG",
+      "model": "gpt-6.1-sol",
+      "system_fingerprint": null,
+      "finish_reason": "stop",
+      "usage": {
+        "prompt_tokens": 440,
+        "completion_tokens": 8,
+        "total_tokens": 448,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "audio_tokens": 0,
+          "accepted_prediction_tokens": 0,
+          "rejected_prediction_tokens": 0
+        }
+      }
+    },
+    "retrieval_ms": 71.239,
+    "e2e_ms": 1555.849,
+    "type": "multi-hop",
+    "expected": [
+      "pep-0020.rst",
+      "pep-0001.rst"
+    ],
     "recall_at_5": 0.0,
-    "mrr": 0.0
+    "mrr_at_5": 0.0,
+    "all_docs_at_5": false,
+    "context_recall": 0.0,
+    "refused": true
   },
   {
     "question": "Documentation string rules and the framework that processes those strings",
-    "type": "multi-hop",
-    "expected": [
-      "pep-0257.rst",
-      "pep-0256.rst"
+    "retrieval": [
+      {
+        "doc_id": "pep-0216.rst",
+        "score": 0.4557327151876499,
+        "start": 420,
+        "text": "[pep-0216.rst]\nng, that string is assigned\nto the ``__doc__`` attribute.\n\nThe ``__doc__`` attribute is called a documentation string, or docstring.\nIt is often used to summarize the interface of the module, class or\nfunction. However, since there is no common format for documentation\nstring, tools for extracting docstrings and transforming those into\ndocumentation in a standard format (e.g., DocBook) have not sprang\nup in abundance, and those that do exist are for the most part\nunmaintained and unused.\n\n\nPerl "
+      },
+      {
+        "doc_id": "pep-0239.rst",
+        "score": 0.35645311547160274,
+        "start": 1680,
+        "text": "[pep-0239.rst]\nerators will do the obvious thing.  Binary operators will\ncoerce integers and long integers to rationals, and rationals to\nfloats and complexes.\n\nThe following attributes will be supported: ``.numerator`` and\n``.denominator``.  The language definition will promise that::\n\n    r.denominator * r == r.numerator\n\nthat the GCD of the numerator and the denominator is 1 and that\nthe denominator is positive.\n\nThe method ``r.trim(max_denominator)`` will return the closest\nrational ``s`` to ``r`` such tha"
+      },
+      {
+        "doc_id": "pep-0013.rst",
+        "score": 0.3556003556005333,
+        "start": 840,
+        "text": "[pep-0013.rst]\nSpecification\n=============\n\nThe steering council\n--------------------\n\nComposition\n~~~~~~~~~~~\n\nThe steering council is a 5-person committee.\n\n\nMandate\n~~~~~~~\n\nThe steering council shall work to:\n\n* Maintain the quality and stability of the Python language and\n  CPython interpreter,\n* Make contributing as accessible, inclusive, and sustainable as\n  possible,\n* Formalize and maintain the relationship between the core team and\n  the PSF,\n* Establish appropriate decision-making processes for PEPs"
+      },
+      {
+        "doc_id": "pep-0205.rst",
+        "score": 0.3550634294186122,
+        "start": 2940,
+        "text": "[pep-0205.rst]\non storing a strong reference and being able to examine all the\ninstances of weak reference objects, and invalidating them when\nthe reference count of their referent goes to one (indicating that\nthe reference stored by the weak reference is the last remaining\nreference).  This has the advantage that the memory management\nmachinery in Python need not change, and that any type can be\nweakly referenced.\n\nThe disadvantage of this approach to invalidation is that it\nassumes that the management of the"
+      },
+      {
+        "doc_id": "pep-0102.rst",
+        "score": 0.35160542320387156,
+        "start": 7560,
+        "text": "[pep-0102.rst]\ne MSVC SP5 CD.  VCREDIST.EXE must be unpacked\n    with winzip, and the Wise Installation System prompts for the\n    directory.\n\n    After building the installer, it should be opened with winzip,\n    and the MS dlls extracted again and check for the same version\n    number as those unpacked from VCREDIST.EXE.\n\n    Thomas uploads this file to the starship.  He then sends the RM\n    a notice which includes the location and MD5 checksum of the\n    Windows executable.\n\n    Note that Thomas's creation"
+      }
     ],
     "retrieved": [
       "pep-0216.rst",
@@ -134,19 +611,94 @@
       "pep-0205.rst",
       "pep-0102.rst"
     ],
-    "retrieval_ms": 53.2,
-    "e2e_ms": 8499.6,
-    "answer": "The context states that the ``__doc__`` attribute is called a documentation string, or docstring. It is often used to summarize the interface of the module, class or function. However, since there is no common format for documentation string, tools for extracting docstrings and transforming those into documentation in a standard format (e.g., DocBook) have not sprang up in abundance, and those that do exist are for the most part unmaintained and unused.",
+    "context_doc_ids": [
+      "pep-0216.rst",
+      "pep-0239.rst",
+      "pep-0013.rst"
+    ],
+    "prompt": "Answer briefly from the context only. If the context does not say, reply exactly: I do not know.\n\nContext:\n[start=420] [pep-0216.rst]\nng, that string is assigned\nto the ``__doc__`` attribute.\n\nThe ``__doc__`` attribute is called a documentation string, or docstring.\nIt is often used to summarize the interface of the module, class or\nfunction. However, since there is no common format for documentation\nstring, tools for extracting docstrings and transforming those into\ndocumentation in a standard format (e.g., DocBook) have not sprang\nup in abundance, and those that do exist are for the most part\nunmaintained and unused.\n\n\nPerl\n\n[start=1680] [pep-0239.rst]\nerators will do the obvious thing.  Binary operators will\ncoerce integers and long integers to rationals, and rationals to\nfloats and complexes.\n\nThe following attributes will be supported: ``.numerator`` and\n``.denominator``.  The language definition will promise that::\n\n    r.denominator * r == r.numerator\n\nthat the GCD of the numerator and the denominator is 1 and that\nthe denominator is positive.\n\nThe method ``r.trim(max_denominator)`` will return the closest\nrational ``s`` to ``r`` such tha\n\n[start=840] [pep-0013.rst]\nSpecification\n=============\n\nThe steering council\n--------------------\n\nComposition\n~~~~~~~~~~~\n\nThe steering council is a 5-person committee.\n\n\nMandate\n~~~~~~~\n\nThe steering council shall work to:\n\n* Maintain the quality and stability of the Python language and\n  CPython interpreter,\n* Make contributing as accessible, inclusive, and sustainable as\n  possible,\n* Formalize and maintain the relationship between the core team and\n  the PSF,\n* Establish appropriate decision-making processes for PEPs\n\nQuestion: Documentation string rules and the framework that processes those strings",
+    "answer": "I do not know.",
     "answer_error": null,
+    "generation": {
+      "text": "I do not know.",
+      "request": {
+        "model": "gpt-6.1-sol",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Answer briefly from the context only. If the context does not say, reply exactly: I do not know.\n\nContext:\n[start=420] [pep-0216.rst]\nng, that string is assigned\nto the ``__doc__`` attribute.\n\nThe ``__doc__`` attribute is called a documentation string, or docstring.\nIt is often used to summarize the interface of the module, class or\nfunction. However, since there is no common format for documentation\nstring, tools for extracting docstrings and transforming those into\ndocumentation in a standard format (e.g., DocBook) have not sprang\nup in abundance, and those that do exist are for the most part\nunmaintained and unused.\n\n\nPerl\n\n[start=1680] [pep-0239.rst]\nerators will do the obvious thing.  Binary operators will\ncoerce integers and long integers to rationals, and rationals to\nfloats and complexes.\n\nThe following attributes will be supported: ``.numerator`` and\n``.denominator``.  The language definition will promise that::\n\n    r.denominator * r == r.numerator\n\nthat the GCD of the numerator and the denominator is 1 and that\nthe denominator is positive.\n\nThe method ``r.trim(max_denominator)`` will return the closest\nrational ``s`` to ``r`` such tha\n\n[start=840] [pep-0013.rst]\nSpecification\n=============\n\nThe steering council\n--------------------\n\nComposition\n~~~~~~~~~~~\n\nThe steering council is a 5-person committee.\n\n\nMandate\n~~~~~~~\n\nThe steering council shall work to:\n\n* Maintain the quality and stability of the Python language and\n  CPython interpreter,\n* Make contributing as accessible, inclusive, and sustainable as\n  possible,\n* Formalize and maintain the relationship between the core team and\n  the PSF,\n* Establish appropriate decision-making processes for PEPs\n\nQuestion: Documentation string rules and the framework that processes those strings"
+          }
+        ],
+        "max_completion_tokens": 1200,
+        "reasoning_effort": "low"
+      },
+      "response_id": "chatcmpl-EfPxCd2RKU1GySbEDuFfVlpQrSgkE",
+      "model": "gpt-6.1-sol",
+      "system_fingerprint": null,
+      "finish_reason": "stop",
+      "usage": {
+        "prompt_tokens": 411,
+        "completion_tokens": 34,
+        "total_tokens": 445,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 20,
+          "audio_tokens": 0,
+          "accepted_prediction_tokens": 0,
+          "rejected_prediction_tokens": 0
+        }
+      }
+    },
+    "retrieval_ms": 65.624,
+    "e2e_ms": 2642.156,
+    "type": "multi-hop",
+    "expected": [
+      "pep-0257.rst",
+      "pep-0256.rst"
+    ],
     "recall_at_5": 0.0,
-    "mrr": 0.0
+    "mrr_at_5": 0.0,
+    "all_docs_at_5": false,
+    "context_recall": 0.0,
+    "refused": true
   },
   {
     "question": "Inline loops that build lists and the protocol for walking a sequence",
-    "type": "multi-hop",
-    "expected": [
-      "pep-0202.rst",
-      "pep-0234.rst"
+    "retrieval": [
+      {
+        "doc_id": "pep-0234.rst",
+        "score": 0.5305954499725112,
+        "start": 4200,
+        "text": "[pep-0234.rst]\n function implements\nfallback semantics when its argument is a sequence that does not implement a\n``tp_iter`` function: a lightweight sequence iterator object is constructed in\nthat case which iterates over the items of the sequence in the natural order.\n\nThe Python bytecode generated for ``for`` loops is changed to use new opcodes,\n``GET_ITER`` and ``FOR_ITER``, that use the iterator protocol rather than the\nsequence protocol to get the next value for the loop variable.  This makes it\npossible "
+      },
+      {
+        "doc_id": "pep-0207.rst",
+        "score": 0.43368248218718397,
+        "start": 13440,
+        "text": "[pep-0207.rst]\ncial methods, then the comparison is reversed,\n   and the right hand operator is called with the opposite operator,\n   and the two objects are swapped. This assumes that a < b and b > a\n   are equivalent, as are a <= b and b >= a, and that == and != are\n   commutative (e.g. a == b if and only if b == a).\n\n   For example, if obj1 is an object which supports the rich\n   comparison protocol and x and y are objects which do not support\n   the rich comparison protocol, then obj1 < x will call the ``_"
+      },
+      {
+        "doc_id": "pep-0201.rst",
+        "score": 0.42426406871192857,
+        "start": 420,
+        "text": "[pep-0201.rst]\nes necessary to support the feature. This PEP summarizes\ndiscussions held in mailing list forums, and provides URLs for further\ninformation, where appropriate.  The CVS revision history of this file\ncontains the definitive historical record.\n\n\nMotivation\n==========\n\nStandard for-loops in Python iterate over every element in a sequence\nuntil the sequence is exhausted [1]_.  However, for-loops iterate over\nonly a single sequence, and it is often desirable to loop over more\nthan one sequence in a l"
+      },
+      {
+        "doc_id": "pep-0272.rst",
+        "score": 0.4124789556921527,
+        "start": 4200,
+        "text": "[pep-0272.rst]\nce the output.  When 'mode'\nis MODE_CTR, the 'counter' keyword argument must be provided, and\nits value must be a callable object, such as a function or method.\nSuccessive calls to this callable object must return a sequence of\nstrings that are of the length 'block_size' and that never\nrepeats.  (Appendix B of the NIST publication gives a way to\ngenerate such a sequence, but that's beyond the scope of this\nPEP.)\n\nThe CFB mode operates on segments of the plaintext and ciphertext\nthat are 'segment"
+      },
+      {
+        "doc_id": "pep-0257.rst",
+        "score": 0.412264884772609,
+        "start": 5040,
+        "text": "[pep-0257.rst]\nincorrect\nor missing arguments (or perhaps with a \"-h\" option, for \"help\").\nSuch a docstring should document the script's function and command\nline syntax, environment variables, and files.  Usage messages can be\nfairly elaborate (several screens full) and should be sufficient for a\nnew user to use the command properly, as well as a complete quick\nreference to all options and arguments for the sophisticated user.\n\nThe docstring for a module should generally list the classes,\nexceptions and funct"
+      }
     ],
     "retrieved": [
       "pep-0234.rst",
@@ -155,19 +707,94 @@
       "pep-0272.rst",
       "pep-0257.rst"
     ],
-    "retrieval_ms": 51.9,
-    "e2e_ms": 7714.4,
-    "answer": null,
-    "answer_error": "recursive/flint-v1.0:free returned no text",
-    "recall_at_5": 0.0,
-    "mrr": 1.0
+    "context_doc_ids": [
+      "pep-0234.rst",
+      "pep-0207.rst",
+      "pep-0201.rst"
+    ],
+    "prompt": "Answer briefly from the context only. If the context does not say, reply exactly: I do not know.\n\nContext:\n[start=4200] [pep-0234.rst]\n function implements\nfallback semantics when its argument is a sequence that does not implement a\n``tp_iter`` function: a lightweight sequence iterator object is constructed in\nthat case which iterates over the items of the sequence in the natural order.\n\nThe Python bytecode generated for ``for`` loops is changed to use new opcodes,\n``GET_ITER`` and ``FOR_ITER``, that use the iterator protocol rather than the\nsequence protocol to get the next value for the loop variable.  This makes it\npossible\n\n[start=13440] [pep-0207.rst]\ncial methods, then the comparison is reversed,\n   and the right hand operator is called with the opposite operator,\n   and the two objects are swapped. This assumes that a < b and b > a\n   are equivalent, as are a <= b and b >= a, and that == and != are\n   commutative (e.g. a == b if and only if b == a).\n\n   For example, if obj1 is an object which supports the rich\n   comparison protocol and x and y are objects which do not support\n   the rich comparison protocol, then obj1 < x will call the ``_\n\n[start=420] [pep-0201.rst]\nes necessary to support the feature. This PEP summarizes\ndiscussions held in mailing list forums, and provides URLs for further\ninformation, where appropriate.  The CVS revision history of this file\ncontains the definitive historical record.\n\n\nMotivation\n==========\n\nStandard for-loops in Python iterate over every element in a sequence\nuntil the sequence is exhausted [1]_.  However, for-loops iterate over\nonly a single sequence, and it is often desirable to loop over more\nthan one sequence in a l\n\nQuestion: Inline loops that build lists and the protocol for walking a sequence",
+    "answer": "I do not know.",
+    "answer_error": null,
+    "generation": {
+      "text": "I do not know.",
+      "request": {
+        "model": "gpt-6.1-sol",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Answer briefly from the context only. If the context does not say, reply exactly: I do not know.\n\nContext:\n[start=4200] [pep-0234.rst]\n function implements\nfallback semantics when its argument is a sequence that does not implement a\n``tp_iter`` function: a lightweight sequence iterator object is constructed in\nthat case which iterates over the items of the sequence in the natural order.\n\nThe Python bytecode generated for ``for`` loops is changed to use new opcodes,\n``GET_ITER`` and ``FOR_ITER``, that use the iterator protocol rather than the\nsequence protocol to get the next value for the loop variable.  This makes it\npossible\n\n[start=13440] [pep-0207.rst]\ncial methods, then the comparison is reversed,\n   and the right hand operator is called with the opposite operator,\n   and the two objects are swapped. This assumes that a < b and b > a\n   are equivalent, as are a <= b and b >= a, and that == and != are\n   commutative (e.g. a == b if and only if b == a).\n\n   For example, if obj1 is an object which supports the rich\n   comparison protocol and x and y are objects which do not support\n   the rich comparison protocol, then obj1 < x will call the ``_\n\n[start=420] [pep-0201.rst]\nes necessary to support the feature. This PEP summarizes\ndiscussions held in mailing list forums, and provides URLs for further\ninformation, where appropriate.  The CVS revision history of this file\ncontains the definitive historical record.\n\n\nMotivation\n==========\n\nStandard for-loops in Python iterate over every element in a sequence\nuntil the sequence is exhausted [1]_.  However, for-loops iterate over\nonly a single sequence, and it is often desirable to loop over more\nthan one sequence in a l\n\nQuestion: Inline loops that build lists and the protocol for walking a sequence"
+          }
+        ],
+        "max_completion_tokens": 1200,
+        "reasoning_effort": "low"
+      },
+      "response_id": "chatcmpl-EfPxFrLMzEbU8ql6La2vQp1ehJ0oc",
+      "model": "gpt-6.1-sol",
+      "system_fingerprint": null,
+      "finish_reason": "stop",
+      "usage": {
+        "prompt_tokens": 417,
+        "completion_tokens": 48,
+        "total_tokens": 465,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 34,
+          "audio_tokens": 0,
+          "accepted_prediction_tokens": 0,
+          "rejected_prediction_tokens": 0
+        }
+      }
+    },
+    "retrieval_ms": 68.167,
+    "e2e_ms": 2606.823,
+    "type": "multi-hop",
+    "expected": [
+      "pep-0202.rst",
+      "pep-0234.rst"
+    ],
+    "recall_at_5": 0.5,
+    "mrr_at_5": 1.0,
+    "all_docs_at_5": false,
+    "context_recall": 0.5,
+    "refused": true
   },
   {
     "question": "Functions that pause and resume and the protocol for walking items",
-    "type": "multi-hop",
-    "expected": [
-      "pep-0255.rst",
-      "pep-0234.rst"
+    "retrieval": [
+      {
+        "doc_id": "pep-0209.rst",
+        "score": 0.5731902027660701,
+        "start": 11760,
+        "text": "[pep-0209.rst]\n argument gives the number\n    of iterations for each dimension along with the buffer offset and\n    step size for each array and each dimension.\n\n    We have predefined several UFuncs for use by the ``__call__`` method:\n    cast, swap, getobj, and setobj.  The cast and swap functions do\n    coercion and byte-swapping, respectively and the getobj and setobj\n    functions do coercion between Numeric arrays and Python sequences.\n\n    The following attributes and methods are proposed for the core\n "
+      },
+      {
+        "doc_id": "pep-0207.rst",
+        "score": 0.4629651680682757,
+        "start": 13440,
+        "text": "[pep-0207.rst]\ncial methods, then the comparison is reversed,\n   and the right hand operator is called with the opposite operator,\n   and the two objects are swapped. This assumes that a < b and b > a\n   are equivalent, as are a <= b and b >= a, and that == and != are\n   commutative (e.g. a == b if and only if b == a).\n\n   For example, if obj1 is an object which supports the rich\n   comparison protocol and x and y are objects which do not support\n   the rich comparison protocol, then obj1 < x will call the ``_"
+      },
+      {
+        "doc_id": "pep-0212.rst",
+        "score": 0.42512573371857126,
+        "start": 2940,
+        "text": "[pep-0212.rst]\n.\n\nThe use of these functions would simplify the idioms for looping\nover the indices and over both elements and indices::\n\n    for i in indices(sequence):\n        # work with index i\n\n    for i, e in irange(sequence):\n        # work with index i and element e\n\n\nMethods for sequence objects\n============================\n\nThis solution proposes the addition of ``indices``, ``items``\nand ``values`` methods to sequences, which enable looping over\nindices only, both indices and elements, and elements "
+      },
+      {
+        "doc_id": "pep-0253.rst",
+        "score": 0.4249729481848971,
+        "start": 15960,
+        "text": "[pep-0253.rst]\ns have the same memory layout.)\n\nThe base type must do the following:\n\n- Add the flag value ``Py_TPFLAGS_BASETYPE`` to ``tp_flags``.\n\n- Declare and use ``tp_new()``, ``tp_alloc()`` and optional ``tp_init()``\n  slots.\n\n- Declare and use ``tp_dealloc()`` and ``tp_free()``.\n\n- Export its object structure declaration.\n\n- Export a subtyping-aware type-checking macro.\n\nThe requirements and signatures for ``tp_new()``, ``tp_alloc()`` and\n``tp_init()`` have already been discussed above: ``tp_alloc()`` s"
+      },
+      {
+        "doc_id": "pep-0013.rst",
+        "score": 0.4232686233864073,
+        "start": 840,
+        "text": "[pep-0013.rst]\nSpecification\n=============\n\nThe steering council\n--------------------\n\nComposition\n~~~~~~~~~~~\n\nThe steering council is a 5-person committee.\n\n\nMandate\n~~~~~~~\n\nThe steering council shall work to:\n\n* Maintain the quality and stability of the Python language and\n  CPython interpreter,\n* Make contributing as accessible, inclusive, and sustainable as\n  possible,\n* Formalize and maintain the relationship between the core team and\n  the PSF,\n* Establish appropriate decision-making processes for PEPs"
+      }
     ],
     "retrieved": [
       "pep-0209.rst",
@@ -176,19 +803,94 @@
       "pep-0253.rst",
       "pep-0013.rst"
     ],
-    "retrieval_ms": 54.1,
-    "e2e_ms": 15757.0,
-    "answer": null,
-    "answer_error": "recursive/flint-v1.0:free returned no text",
+    "context_doc_ids": [
+      "pep-0209.rst",
+      "pep-0207.rst",
+      "pep-0212.rst"
+    ],
+    "prompt": "Answer briefly from the context only. If the context does not say, reply exactly: I do not know.\n\nContext:\n[start=11760] [pep-0209.rst]\n argument gives the number\n    of iterations for each dimension along with the buffer offset and\n    step size for each array and each dimension.\n\n    We have predefined several UFuncs for use by the ``__call__`` method:\n    cast, swap, getobj, and setobj.  The cast and swap functions do\n    coercion and byte-swapping, respectively and the getobj and setobj\n    functions do coercion between Numeric arrays and Python sequences.\n\n    The following attributes and methods are proposed for the core\n\n[start=13440] [pep-0207.rst]\ncial methods, then the comparison is reversed,\n   and the right hand operator is called with the opposite operator,\n   and the two objects are swapped. This assumes that a < b and b > a\n   are equivalent, as are a <= b and b >= a, and that == and != are\n   commutative (e.g. a == b if and only if b == a).\n\n   For example, if obj1 is an object which supports the rich\n   comparison protocol and x and y are objects which do not support\n   the rich comparison protocol, then obj1 < x will call the ``_\n\n[start=2940] [pep-0212.rst]\n.\n\nThe use of these functions would simplify the idioms for looping\nover the indices and over both elements and indices::\n\n    for i in indices(sequence):\n        # work with index i\n\n    for i, e in irange(sequence):\n        # work with index i and element e\n\n\nMethods for sequence objects\n============================\n\nThis solution proposes the addition of ``indices``, ``items``\nand ``values`` methods to sequences, which enable looping over\nindices only, both indices and elements, and elements\n\nQuestion: Functions that pause and resume and the protocol for walking items",
+    "answer": "I do not know.",
+    "answer_error": null,
+    "generation": {
+      "text": "I do not know.",
+      "request": {
+        "model": "gpt-6.1-sol",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Answer briefly from the context only. If the context does not say, reply exactly: I do not know.\n\nContext:\n[start=11760] [pep-0209.rst]\n argument gives the number\n    of iterations for each dimension along with the buffer offset and\n    step size for each array and each dimension.\n\n    We have predefined several UFuncs for use by the ``__call__`` method:\n    cast, swap, getobj, and setobj.  The cast and swap functions do\n    coercion and byte-swapping, respectively and the getobj and setobj\n    functions do coercion between Numeric arrays and Python sequences.\n\n    The following attributes and methods are proposed for the core\n\n[start=13440] [pep-0207.rst]\ncial methods, then the comparison is reversed,\n   and the right hand operator is called with the opposite operator,\n   and the two objects are swapped. This assumes that a < b and b > a\n   are equivalent, as are a <= b and b >= a, and that == and != are\n   commutative (e.g. a == b if and only if b == a).\n\n   For example, if obj1 is an object which supports the rich\n   comparison protocol and x and y are objects which do not support\n   the rich comparison protocol, then obj1 < x will call the ``_\n\n[start=2940] [pep-0212.rst]\n.\n\nThe use of these functions would simplify the idioms for looping\nover the indices and over both elements and indices::\n\n    for i in indices(sequence):\n        # work with index i\n\n    for i, e in irange(sequence):\n        # work with index i and element e\n\n\nMethods for sequence objects\n============================\n\nThis solution proposes the addition of ``indices``, ``items``\nand ``values`` methods to sequences, which enable looping over\nindices only, both indices and elements, and elements\n\nQuestion: Functions that pause and resume and the protocol for walking items"
+          }
+        ],
+        "max_completion_tokens": 1200,
+        "reasoning_effort": "low"
+      },
+      "response_id": "chatcmpl-EfPxHHvSIZgXW5RmMBqtxL0b6BB7N",
+      "model": "gpt-6.1-sol",
+      "system_fingerprint": null,
+      "finish_reason": "stop",
+      "usage": {
+        "prompt_tokens": 419,
+        "completion_tokens": 8,
+        "total_tokens": 427,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "audio_tokens": 0,
+          "accepted_prediction_tokens": 0,
+          "rejected_prediction_tokens": 0
+        }
+      }
+    },
+    "retrieval_ms": 72.007,
+    "e2e_ms": 2071.575,
+    "type": "multi-hop",
+    "expected": [
+      "pep-0255.rst",
+      "pep-0234.rst"
+    ],
     "recall_at_5": 0.0,
-    "mrr": 0.0
+    "mrr_at_5": 0.0,
+    "all_docs_at_5": false,
+    "context_recall": 0.0,
+    "refused": true
   },
   {
     "question": "Rules for laying out code and how a source file declares its character set",
-    "type": "multi-hop",
-    "expected": [
-      "pep-0008.rst",
-      "pep-0263.rst"
+    "retrieval": [
+      {
+        "doc_id": "pep-0225.rst",
+        "score": 0.2911569516371818,
+        "start": 7140,
+        "text": "[pep-0225.rst]\nrands.\n   - Unfamiliar to the intended users.\n   - Too verbose for the intended users.\n   - Unable to use natural precedence rules.\n\n3. Use *shadow classes*.  For matrix class define a shadow array class\n   accessible through a method ``.E``, so that for matrices *a* and *b*,\n   ``a.E*b`` would be a matrix object that is ``elementwise_mul(a,b)``.\n\n   Likewise define a shadow matrix class for arrays accessible through a method\n   ``.M`` so that for arrays *a* and *b*, ``a.M*b`` would be an array "
+      },
+      {
+        "doc_id": "pep-0245.rst",
+        "score": 0.2875430708824757,
+        "start": 3780,
+        "text": "[pep-0245.rst]\n that interfaces\ntry to solve.\n\n- Developers waste a lot of time looking at the source code of\n  your system to figure out how objects work.\n\n- Developers who are new to your system may misunderstand how your\n  objects work, causing, and possibly propagating, usage errors.\n\n- Because a lack of interfaces means usage is inferred from the\n  source, developers may end up using methods and attributes that\n  are meant for \"internal use only\".\n\n- Code inspection can be hard, and very discouraging to n"
+      },
+      {
+        "doc_id": "pep-0012.rst",
+        "score": 0.28749445424997294,
+        "start": 19320,
+        "text": "[pep-0012.rst]\ne :pep:`1` for more information on how to write a PEP,\n    and :pep:`the Hyperlink section of PEP 12 <12#hyperlinks>` for how to link.\n\nPEP numbers in the text are never padded, and there is a space (not a dash)\nbetween \"PEP\" or \"RFC\" and the number; the above roles will take care of\nthat for you.\n\n\nFootnotes\n---------\n\nFootnote references consist of a left square bracket, a label, a\nright square bracket, and a trailing underscore.\nInstead of a number, use a label of the\nform \"#word\", where \"wor"
+      },
+      {
+        "doc_id": "pep-0008.rst",
+        "score": 0.28685486624025447,
+        "start": 47460,
+        "text": "[pep-0008.rst]\nutside the stdlib, experiments within the rules of :pep:`484`\n  are now encouraged.  For example, marking up a large third party\n  library or application with :pep:`484` style type annotations,\n  reviewing how easy it was to add those annotations, and observing\n  whether their presence increases code understandability.\n\n- The Python standard library should be conservative in adopting such\n  annotations, but their use is allowed for new code and for big\n  refactorings.\n\n- For code that wants to m"
+      },
+      {
+        "doc_id": "pep-0225.rst",
+        "score": 0.28685486624025447,
+        "start": 10920,
+        "text": "[pep-0225.rst]\nese themes.  These are considered\n  unfavorably.  For completeness some are listed here:\n\n  - Use ``@/`` and ``/@`` for left and right division\n  - Use ``[*]`` and ``(*)`` for outer and inner products\n  - Use a single operator ``@`` for multiplication.\n\n- Use ``__call__`` to simulate multiplication::\n\n    a(b) or (a)(b)\n\nCriteria for choosing among the representations include:\n\n- No syntactical ambiguities with existing operators.\n\n- Higher readability in actual formulas.  This makes the bracket"
+      }
     ],
     "retrieved": [
       "pep-0225.rst",
@@ -197,11 +899,59 @@
       "pep-0008.rst",
       "pep-0225.rst"
     ],
-    "retrieval_ms": 50.5,
-    "e2e_ms": 8075.0,
+    "context_doc_ids": [
+      "pep-0225.rst",
+      "pep-0245.rst",
+      "pep-0012.rst"
+    ],
+    "prompt": "Answer briefly from the context only. If the context does not say, reply exactly: I do not know.\n\nContext:\n[start=7140] [pep-0225.rst]\nrands.\n   - Unfamiliar to the intended users.\n   - Too verbose for the intended users.\n   - Unable to use natural precedence rules.\n\n3. Use *shadow classes*.  For matrix class define a shadow array class\n   accessible through a method ``.E``, so that for matrices *a* and *b*,\n   ``a.E*b`` would be a matrix object that is ``elementwise_mul(a,b)``.\n\n   Likewise define a shadow matrix class for arrays accessible through a method\n   ``.M`` so that for arrays *a* and *b*, ``a.M*b`` would be an array\n\n[start=3780] [pep-0245.rst]\n that interfaces\ntry to solve.\n\n- Developers waste a lot of time looking at the source code of\n  your system to figure out how objects work.\n\n- Developers who are new to your system may misunderstand how your\n  objects work, causing, and possibly propagating, usage errors.\n\n- Because a lack of interfaces means usage is inferred from the\n  source, developers may end up using methods and attributes that\n  are meant for \"internal use only\".\n\n- Code inspection can be hard, and very discouraging to n\n\n[start=19320] [pep-0012.rst]\ne :pep:`1` for more information on how to write a PEP,\n    and :pep:`the Hyperlink section of PEP 12 <12#hyperlinks>` for how to link.\n\nPEP numbers in the text are never padded, and there is a space (not a dash)\nbetween \"PEP\" or \"RFC\" and the number; the above roles will take care of\nthat for you.\n\n\nFootnotes\n---------\n\nFootnote references consist of a left square bracket, a label, a\nright square bracket, and a trailing underscore.\nInstead of a number, use a label of the\nform \"#word\", where \"wor\n\nQuestion: Rules for laying out code and how a source file declares its character set",
     "answer": "I do not know.",
     "answer_error": null,
-    "recall_at_5": 0.0,
-    "mrr": 0.25
+    "generation": {
+      "text": "I do not know.",
+      "request": {
+        "model": "gpt-6.1-sol",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Answer briefly from the context only. If the context does not say, reply exactly: I do not know.\n\nContext:\n[start=7140] [pep-0225.rst]\nrands.\n   - Unfamiliar to the intended users.\n   - Too verbose for the intended users.\n   - Unable to use natural precedence rules.\n\n3. Use *shadow classes*.  For matrix class define a shadow array class\n   accessible through a method ``.E``, so that for matrices *a* and *b*,\n   ``a.E*b`` would be a matrix object that is ``elementwise_mul(a,b)``.\n\n   Likewise define a shadow matrix class for arrays accessible through a method\n   ``.M`` so that for arrays *a* and *b*, ``a.M*b`` would be an array\n\n[start=3780] [pep-0245.rst]\n that interfaces\ntry to solve.\n\n- Developers waste a lot of time looking at the source code of\n  your system to figure out how objects work.\n\n- Developers who are new to your system may misunderstand how your\n  objects work, causing, and possibly propagating, usage errors.\n\n- Because a lack of interfaces means usage is inferred from the\n  source, developers may end up using methods and attributes that\n  are meant for \"internal use only\".\n\n- Code inspection can be hard, and very discouraging to n\n\n[start=19320] [pep-0012.rst]\ne :pep:`1` for more information on how to write a PEP,\n    and :pep:`the Hyperlink section of PEP 12 <12#hyperlinks>` for how to link.\n\nPEP numbers in the text are never padded, and there is a space (not a dash)\nbetween \"PEP\" or \"RFC\" and the number; the above roles will take care of\nthat for you.\n\n\nFootnotes\n---------\n\nFootnote references consist of a left square bracket, a label, a\nright square bracket, and a trailing underscore.\nInstead of a number, use a label of the\nform \"#word\", where \"wor\n\nQuestion: Rules for laying out code and how a source file declares its character set"
+          }
+        ],
+        "max_completion_tokens": 1200,
+        "reasoning_effort": "low"
+      },
+      "response_id": "chatcmpl-EfPxJUWetv8CXM2zxhGVJOTwBWhvQ",
+      "model": "gpt-6.1-sol",
+      "system_fingerprint": null,
+      "finish_reason": "stop",
+      "usage": {
+        "prompt_tokens": 457,
+        "completion_tokens": 8,
+        "total_tokens": 465,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "audio_tokens": 0,
+          "accepted_prediction_tokens": 0,
+          "rejected_prediction_tokens": 0
+        }
+      }
+    },
+    "retrieval_ms": 67.83,
+    "e2e_ms": 1836.427,
+    "type": "multi-hop",
+    "expected": [
+      "pep-0008.rst",
+      "pep-0263.rst"
+    ],
+    "recall_at_5": 0.5,
+    "mrr_at_5": 0.25,
+    "all_docs_at_5": false,
+    "context_recall": 0.0,
+    "refused": true
   }
 ]
