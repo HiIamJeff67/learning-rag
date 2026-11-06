@@ -1,0 +1,234 @@
+{
+  "started_at": "2026-11-06T12:48:00.441627+00:00",
+  "corpus_sha256": "18fa7b1bb4dc911a0a4e57c9423e990b5f080eefd1994a74c629ab85b1dc4ec0",
+  "questions_sha256": "05a42ee7973fb3e0fb1a8601e7165f0ed108f4b848812afb71a43e8ceeaf7c21",
+  "questions": 30,
+  "scored_questions": 28,
+  "vector": "term-frequency",
+  "similarity": "cosine",
+  "rank_k": 5,
+  "runs": {
+    "fixed-500-0": {
+      "added": 100,
+      "rebuilt": 0,
+      "metadata_only": 0,
+      "reused": 0,
+      "deleted": 0,
+      "documents": 100,
+      "chunks": 2453,
+      "postings": 135571,
+      "vectors_written": 2453,
+      "embedding_ms": 57.909,
+      "ingestion_ms": 687.175,
+      "index_bytes": 5738496,
+      "strategy": "fixed",
+      "size": 500,
+      "overlap": 0,
+      "recall_at_5": 0.642857,
+      "mrr_at_5": 0.532738,
+      "retrieval_ms_p50": 8.3,
+      "by_type": {
+        "exact": {
+          "questions": 14,
+          "recall_at_5": 1.0,
+          "mrr_at_5": 0.791667
+        },
+        "multi-hop": {
+          "questions": 6,
+          "recall_at_5": 0.333333,
+          "mrr_at_5": 0.416667
+        },
+        "synonym": {
+          "questions": 8,
+          "recall_at_5": 0.25,
+          "mrr_at_5": 0.166667
+        }
+      }
+    },
+    "fixed-500-80": {
+      "added": 100,
+      "rebuilt": 0,
+      "metadata_only": 0,
+      "reused": 0,
+      "deleted": 0,
+      "documents": 100,
+      "chunks": 2890,
+      "postings": 160444,
+      "vectors_written": 2890,
+      "embedding_ms": 65.969,
+      "ingestion_ms": 767.178,
+      "index_bytes": 6840320,
+      "strategy": "fixed",
+      "size": 500,
+      "overlap": 80,
+      "recall_at_5": 0.678571,
+      "mrr_at_5": 0.571429,
+      "retrieval_ms_p50": 9.6,
+      "by_type": {
+        "exact": {
+          "questions": 14,
+          "recall_at_5": 1.0,
+          "mrr_at_5": 0.803571
+        },
+        "multi-hop": {
+          "questions": 6,
+          "recall_at_5": 0.333333,
+          "mrr_at_5": 0.375
+        },
+        "synonym": {
+          "questions": 8,
+          "recall_at_5": 0.375,
+          "mrr_at_5": 0.3125
+        }
+      }
+    },
+    "recursive-500-0": {
+      "added": 100,
+      "rebuilt": 0,
+      "metadata_only": 0,
+      "reused": 0,
+      "deleted": 0,
+      "documents": 100,
+      "chunks": 3016,
+      "postings": 138766,
+      "vectors_written": 3016,
+      "embedding_ms": 58.351,
+      "ingestion_ms": 721.755,
+      "index_bytes": 5910528,
+      "strategy": "recursive",
+      "size": 500,
+      "overlap": 0,
+      "recall_at_5": 0.660714,
+      "mrr_at_5": 0.574405,
+      "retrieval_ms_p50": 8.6,
+      "by_type": {
+        "exact": {
+          "questions": 14,
+          "recall_at_5": 1.0,
+          "mrr_at_5": 0.827381
+        },
+        "multi-hop": {
+          "questions": 6,
+          "recall_at_5": 0.25,
+          "mrr_at_5": 0.333333
+        },
+        "synonym": {
+          "questions": 8,
+          "recall_at_5": 0.375,
+          "mrr_at_5": 0.3125
+        }
+      }
+    },
+    "recursive-500-80": {
+      "added": 100,
+      "rebuilt": 0,
+      "metadata_only": 0,
+      "reused": 0,
+      "deleted": 0,
+      "documents": 100,
+      "chunks": 3186,
+      "postings": 146452,
+      "vectors_written": 3186,
+      "embedding_ms": 60.204,
+      "ingestion_ms": 720.279,
+      "index_bytes": 6262784,
+      "strategy": "recursive",
+      "size": 500,
+      "overlap": 80,
+      "recall_at_5": 0.589286,
+      "mrr_at_5": 0.526786,
+      "retrieval_ms_p50": 9.4,
+      "by_type": {
+        "exact": {
+          "questions": 14,
+          "recall_at_5": 0.928571,
+          "mrr_at_5": 0.767857
+        },
+        "multi-hop": {
+          "questions": 6,
+          "recall_at_5": 0.25,
+          "mrr_at_5": 0.333333
+        },
+        "synonym": {
+          "questions": 8,
+          "recall_at_5": 0.25,
+          "mrr_at_5": 0.25
+        }
+      }
+    },
+    "section-500-0": {
+      "added": 100,
+      "rebuilt": 0,
+      "metadata_only": 0,
+      "reused": 0,
+      "deleted": 0,
+      "documents": 100,
+      "chunks": 3423,
+      "postings": 146570,
+      "vectors_written": 3423,
+      "embedding_ms": 60.034,
+      "ingestion_ms": 715.377,
+      "index_bytes": 6283264,
+      "strategy": "section",
+      "size": 500,
+      "overlap": 0,
+      "recall_at_5": 0.678571,
+      "mrr_at_5": 0.571429,
+      "retrieval_ms_p50": 9.2,
+      "by_type": {
+        "exact": {
+          "questions": 14,
+          "recall_at_5": 1.0,
+          "mrr_at_5": 0.767857
+        },
+        "multi-hop": {
+          "questions": 6,
+          "recall_at_5": 0.333333,
+          "mrr_at_5": 0.375
+        },
+        "synonym": {
+          "questions": 8,
+          "recall_at_5": 0.375,
+          "mrr_at_5": 0.375
+        }
+      }
+    },
+    "section-500-80": {
+      "added": 100,
+      "rebuilt": 0,
+      "metadata_only": 0,
+      "reused": 0,
+      "deleted": 0,
+      "documents": 100,
+      "chunks": 3537,
+      "postings": 152689,
+      "vectors_written": 3537,
+      "embedding_ms": 64.617,
+      "ingestion_ms": 768.908,
+      "index_bytes": 6529024,
+      "strategy": "section",
+      "size": 500,
+      "overlap": 80,
+      "recall_at_5": 0.642857,
+      "mrr_at_5": 0.553571,
+      "retrieval_ms_p50": 10.1,
+      "by_type": {
+        "exact": {
+          "questions": 14,
+          "recall_at_5": 0.928571,
+          "mrr_at_5": 0.732143
+        },
+        "multi-hop": {
+          "questions": 6,
+          "recall_at_5": 0.333333,
+          "mrr_at_5": 0.375
+        },
+        "synonym": {
+          "questions": 8,
+          "recall_at_5": 0.375,
+          "mrr_at_5": 0.375
+        }
+      }
+    }
+  }
+}

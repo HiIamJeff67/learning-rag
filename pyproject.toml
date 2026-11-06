@@ -4,13 +4,20 @@ version = "0.1.0"
 description = "Shared experiments for learning RAG"
 readme = "README.md"
 requires-python = ">=3.12"
-dependencies = []
+dependencies = [
+    "beautifulsoup4>=4.15.0",
+    "markdown-it-py>=4.2.0",
+    "pdfplumber>=0.11.10",
+]
 
 [project.scripts]
 learning-rag = "learning_rag:main"
 
 [dependency-groups]
-dev = ["pytest"]
+dev = [
+    "pytest",
+    "reportlab>=5.1.0",
+]
 
 [tool.basedpyright]
 extraPaths = ["src"]

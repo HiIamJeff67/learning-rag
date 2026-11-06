@@ -1,0 +1,81 @@
+[
+  {
+    "case": "pdf_wrapped_title",
+    "before_method": "raw PDF text lines",
+    "before": [
+      "Return",
+      "policy"
+    ],
+    "after": "Return policy"
+  },
+  {
+    "case": "pdf_visual_wrap",
+    "before_method": "raw PDF text lines",
+    "before": [
+      "Refunds apply to items returned",
+      "within 14 days."
+    ],
+    "after": "Refunds apply to items returned within 14 days."
+  },
+  {
+    "case": "pdf_table_rows",
+    "before_method": "PDF text without repeated field names",
+    "before": [
+      "Category Window",
+      "Regular 14 days",
+      "Sale No returns"
+    ],
+    "after": [
+      "Category: Regular\nWindow: 14 days",
+      "Category: Sale\nWindow: No returns"
+    ]
+  },
+  {
+    "case": "pdf_code_indentation",
+    "before_method": "raw PDF text lines",
+    "before": [
+      "if can_refund:",
+      "approve()"
+    ],
+    "after": "if can_refund:\n    approve()"
+  },
+  {
+    "case": "markdown_code_block",
+    "before_method": "global whitespace collapse",
+    "before": "## Approval ```python if can_refund: approve() notify() ```",
+    "after": "if can_refund:\n    approve()\n\nnotify()"
+  },
+  {
+    "case": "markdown_escaped_pipe",
+    "before_method": "split on every pipe",
+    "before": [
+      " Union ",
+      " a \\",
+      " b "
+    ],
+    "after": "Name: Union\nExample: a | b"
+  },
+  {
+    "case": "html_rowspan",
+    "before_method": "flatten each HTML row",
+    "before": "150",
+    "after": "Region: Taipei\nFee: 150"
+  },
+  {
+    "case": "rst_cross_section",
+    "before_method": "fixed size cutting",
+    "before": [
+      "Regular items\n=============\n\nRefund within 14 days.\n\nSale items\n==========\n\nNo refunds.\n"
+    ],
+    "after": [
+      {
+        "section": "Regular items",
+        "text": "Regular items\n=============\n\nRefund within 14 days.\n\n"
+      },
+      {
+        "section": "Sale items",
+        "text": "Sale items\n==========\n\nNo refunds.\n"
+      }
+    ]
+  }
+]

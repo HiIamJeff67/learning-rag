@@ -39,3 +39,5 @@ Copy `.env.example` to `.env` when an experiment needs an API key. The term-over
 ## Current experiment
 
 `experiments/e01_naive_rag/` is the baseline: fixed-size chunks of the pinned PEPs, term-overlap cosine, and an optional text-model answer. Run it with `uv run python -m experiments.e01_naive_rag.run`. The corpus commit is recorded in `data/raw/SOURCE.txt`. Changing those files means pinning a new source and rerunning the experiment. The [experiment report](experiments/e01_naive_rag/README.md) records the metric definitions, results, and failure analysis. Evaluation runs retrieval only by default; `--answer` also calls the model configured in `.env`.
+
+[RAG-10 ingestion](experiments/e02_ingestion/README.md) uses the same corpus and question set to compare three chunking strategies and two overlap settings. Run `uv run python -m experiments.e02_ingestion.run compare` to reproduce the retrieval and indexing measurements.

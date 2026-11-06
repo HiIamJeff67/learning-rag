@@ -1,0 +1,39 @@
+{
+  "status": "passed",
+  "pytest_passed": 42,
+  "baseline": {
+    "fixed_500_80_exact_ranking_score_and_offset_matches": 30,
+    "same_corpus_and_question_hashes": true
+  },
+  "repeatability": {
+    "configurations": 6,
+    "matching_query_results": 180,
+    "timings_excluded": true
+  },
+  "cli": {
+    "formats": [
+      "Markdown",
+      "HTML",
+      "PDF"
+    ],
+    "first_added": 3,
+    "initial_chunks": 4,
+    "reimport_reused": 3,
+    "reimport_vectors_written": 0,
+    "update_rebuilt": 1,
+    "update_reused": 2,
+    "removed_source": "shipping.html",
+    "sqlite_integrity": "ok"
+  },
+  "parser_examples": 8,
+  "pdf_smoke": {
+    "file": "textbook/papers/lewis-2020-rag.pdf",
+    "pages_with_extracted_text": 19,
+    "wrapped_title_joined": true
+  },
+  "artifacts_sha256": {
+    "metrics.json": "2d64633b3911ff66272bc8a6a36e4dd5850773af82e2bdaaf29413807a0f2fba",
+    "questions.json": "d1e01f90d3d6121d28f47fe7b8fb72b1b6ac20b5d046a6a1ba5bbdec2d0d0f68",
+    "parsing_cases.json": "42554338d7072921fda8f750fa7bf57da80f5e59ae4bac58b2f74881470bbdad"
+  }
+}
